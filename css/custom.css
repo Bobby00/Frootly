@@ -1,10 +1,12 @@
-#currentCountApple, 
-#currentCountAvocado, 
+#currentCountApple,
+#currentCountAvocado,
 #currentCountBanana ,
 #currentCountStrawberry,
 #currentCountMelon,
 #currentCountMango {
-  font-size: 45px;
+  font-size: 40px;
+  color: #fe9c0e;
+  font-family: cursive;
 }
 #decrementButtonApple,
 #decrementButtonAvocado,
@@ -13,8 +15,8 @@
 #decrementButtonMelon,
 #decrementButtonMango {
   font-family:monospace;
-  font-size:40px;
-  color:white;
+  font-size:35px;
+  color: #fe9c0e;
 }
 #incrementButtonApple,
 #incrementButtonAvocado,
@@ -23,8 +25,8 @@
 #incrementButtonMelon,
 #incrementButtonMango {
   font-family:monospace;
-  font-size:40px;
-  color:white;
+  font-size:35px;
+  color: #fe9c0e;
   padding-left: 15px;
 }
 #decrementButtonApple:hover,
@@ -34,7 +36,7 @@
 #decrementButtonMelon:hover,
 #decrementButtonMango:hover{
   font-family:monospace;
-  font-size:40px;
+  font-size:35px;
   color:orange;
   cursor: pointer;
 }
@@ -45,8 +47,124 @@
 #incrementButtonMelon:hover,
 #incrementButtonMango:hover{
   font-family:monospace;
-  font-size:40px;
+  font-size:35px;
   color:orange;
   padding-left: 15px;
   cursor: pointer;
+}
+.bar {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding: 10px;
+}
+
+.show-cart li {
+  display: flex;
+}
+.form-control+.input-group-addon:not(:first-child) {
+  background-color: #7c9330;
+  border-color: #7c9330;
+  padding-left: 4%;
+  padding-right: 4%;
+  border-radius: 0% 50% 50% 0%;
+}
+.minus-item {
+  background-color: #7c9330;
+  border-color: #7c9330;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 50% 0% 0% 50%;
+}
+.minus-item:hover {
+  background-color: #7c9330;
+  border-color: #7c9330;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 50% 0% 0% 50%;
+}
+.delete-item {
+  padding-left: 40%;
+  padding-right: 40%;
+  border-radius: 100%;
+  background-color: white;
+  color: #7c9330;
+  border-color: #7c9330;
+}
+.delete-item:hover {
+  padding-left: 40%;
+  padding-right: 40%;
+  border-radius: 100%;
+  background-color: #7c9330;
+  color: white;
+  border-color: white;
+}
+.input-group .form-control:not(:first-child):not(:last-child), .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child){
+  height: auto;
+}
+.table td, .table th {
+  padding: 0.7rem;
+  font-size: 17px;
+  vertical-align: 0px;
+}
+.cart-style-1 {
+  height: 13%;
+  width: 13%;
+  padding:10px;
+  border-radius: 50%;
+  background-color: #fe9c0e;
+}
+.cart-style-1:hover {
+  height: 13%;
+  width: 13%;
+  padding:10px;
+  border-radius: 50%;
+  background-color: #fe9c0e;
+}
+.fa-shopping-basket {
+  font-size: 350%;
+  color: white;
+  background-color: #7c9330;
+  right: 3%;
+  padding: 10px;
+  border-radius: 50%;
+  position: relative;
+  opacity: 1;
+  z-index: 2000;
+  transition-duration: 0.6s;
+  display: none;
+}
+.fa-shopping-basket:hover {
+  right: 3%;
+  padding: 10px;
+  font-size: 370%;
+  background-color: white;
+  color: #7c9330;
+  cursor: pointer;
+  opacity: 1;
+}
+.fixed-bottom {
+  margin-bottom: 3%;
+}
+.total-count {
+  font-family: cursive;
+  font-size: 20px;
+  position: absolute;
+  top: 0%;
+  font-weight: bolder;
+  background-color: white;
+  padding: 3% 6% 3% 6%;
+  border-radius: 50%;
+  color: #7c9330;
+
+}
+.total-count:hover {
+  font-family: cursive;
+  font-size: 21px;
+  top: 0%;
+  color: #7c9330;
+  position: absolute;
+  background-color: white;
+  padding: 3% 6% 3% 6%;
+  border-radius: 50%;
 }

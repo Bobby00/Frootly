@@ -2,17 +2,20 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Frootly - Your one stop shop for fresh & tasty Fruits</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
         <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="css/theme-tangerine.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="css/test4.css"/>
-        <link rel="stylesheet" href="pluminus.css"/>
+        <link rel="icon" href="img/logo-frootly.png"/>
+
 
     </head>
     <body data-smooth-scroll-offset="77">
@@ -23,7 +26,7 @@
                         <div class="row">
                             <div class="col-md-1 col-sm-2 col-xs-3">
                                 <div class="bar__module">
-                                    <a href="index.html"> <img class="logo logo-dark" alt="logo" src="img/logo-frootly3.png"> <img class="logo logo-light" alt="logo" src="img/logo-light.png"> </a>
+                                    <a href="index.html"> <img class="logo logo-dark" alt="logo" src="img/logo-frootly3.png"> <img class="logo logo-light" alt="logo"> </a>
                                 </div>
                             </div>
                             <div class="col-md-11 col-sm-10 col-xs-9">
@@ -60,7 +63,7 @@
                     <div class="row">
                         <div class="col-sm-8 col-md-7">
                             <h1>Enjoy fresh and healthy fruits delivered to you</h1>
-                            <a onclick="myFunction()" class="btn type--uppercase btn--primary" href="#show-more"> <span class="btn__text"><span>Get started today</span></span>
+                            <a onclick="myFunction()" class="btn type--uppercase btn--primary inner-link" href="#show-more"> <span class="btn__text"><span>Get started today</span></span>
                             </a>
                         </div>
                     </div>
@@ -96,11 +99,12 @@
                         </div>
                     </div>
                 </div>
+              </div>
             </section>
             <section class="switchable bg--secondary">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6 col-md-5">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
                             <div class="switchable__text" id="show">
                                 <div class="switchable__text">
                                     <h2>Frootly Fruit Basket of the day</h2>
@@ -108,14 +112,14 @@
 
                              </div>
 														 <hr class="short">
-														 <a style="background-color:#006e90;" onclick="mybasket()" href="#show-basket" class="btn btn--primary">
-	                               <span class="btn__text">Create your own basket</span>
+														 <a style="background-color:white;" onclick="mybasket()" href="#show-basket" class="btn btn--primary inner-link">
+	                               <span style="color:#fe9c0c;" class="btn__text">Create your own basket</span>
                                </a>
 
                          </div>
 
                         </div>
-                        <div class="col-sm-6 col-xs-12">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
                             <div class="pricing pricing-2 boxed boxed--border boxed--lg">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
 																<ul>
@@ -140,238 +144,180 @@
                 </div>
             </section>
 
-            <section id="show-basket" style="display:none">
-                  <div class="nav-container"> </div>
+            <section id="show-basket" style="display:none; padding-top:0px; padding-bottom:0px;">
                   <div class="main-container">
                       <section class="bg--primary">
                           <div class="container">
-                            <h2 class="text-center">Choose your desired Fruit(s)</h2>
+                            <h2 class="text-center">Select Your Fruit(s)</h2>
                             <br/>
                               <div class="row">
-                                <figure class="snip1246">
-                                <div class="col-md-4 col-sm-6 col-xs-12 xs-margin-nineteen-bottom">
-                                      <a href="#0" class="block">
-                                          <div class="feature feature-7 boxed text-center imagebg section--ken-burns" data-overlay="6">
-                                              <div class="background-image-holder"> <img alt="background" src="img/apple.jpg"> </div>
-
-                                              <figcaption>
-                                                <h2 style="color:orange" class="text-center">Apples</h2>
-                                                <div id="apple_details">
-                                                <p>Very rich in important antioxidants, and dietary fiber</p>
-                                                <div style="font-weight:bold; color:orange; font-size:25px;" class="price">Kes 30.00 </div>
-                                                <a onclick="apple_pluminus()" href="#0" data-price="30.00" class="add-to-cart">Add to basket</a>
-                                              </div>
-
-                                              <div id="apple_quantity" class="hide">
-                                              <div class="container">
-                                                <h4 style="text-decoration:em">How Many? <h4/>
-                                                  <br>
-                                                <span id="decrementButtonApple"> < </span>
-                                                  <span type="number" id="currentCountApple">0</span>
-                                                <span id="incrementButtonApple"> > </span>
-                                              </div>
-                                            </div>
-
-                                              </figcaption>
+                                <div class="col-sm-4">
+                                    <article class="feature feature-1">
+                                        <a href="#0" class="block"> <img alt="Image" src="img/apple.jpg"> </a>
+                                        <div class="feature__body boxed boxed--border">
+                                          <h2 style="color:orange;" class="text-orange text-left">Apples <span class="price-style"><em>KES 40.00</em></span></h2>
+                                          <div id="apple_details">
+                                            <h5>Very rich in important antioxidants, and dietary fiber</h5>
+                                            <a data-name="Apples" data-price="40" style="color:orange;" onclick="apple_pluminus()" href="#0" class="add-to-cart cd-add-to-cart">Add To Basket</a>
                                           </div>
-                                      </a>
-                                  </div>
-                                </figure>
 
-                                <figure class="snip1246">
-                                <div class="col-md-4 col-sm-6 col-xs-12 xs-margin-nineteen-bottom">
-                                      <a href="#0" class="block">
-                                          <div class="feature feature-7 boxed text-center imagebg section--ken-burns" data-overlay="6">
-                                              <div class="background-image-holder"> <img alt="background" src="img/avocado.jpg"> </div>
+                                          <div id="apple_quantity" class="hide">
+                                          <div class="container text-center">
+                                            <h4 class="spacing-small" style="text-decoration:em">How Many? <h4/>
 
-                                              <figcaption>
-                                                <h2 style="color:orange;" class="text-orange text-center">Avocados</h2>
-                                                <div id="avocado_details">
-                                                <p>Rich in Heart-Healthy Monounsaturated Fatty Acids</p>
-                                                <div style="font-weight:bold; color:orange; font-size:25px;" class="price">Kes 40.00 </div>
-                                                <a onclick="avocado_pluminus()" href="#0" data-price="40.00" class="add-to-cart">Add to basket</a>
-                                              </div>
-
-                                              <div id="avocado_quantity" class="hide">
-                                              <div class="container">
-                                                <h4 style="text-decoration:em">How Many? <h4/>
-                                                  <br>
-                                                <span id="decrementButtonAvocado"> < </span>
-                                                  <span type="number" id="currentCountAvocado">0</span>
-                                                <span id="incrementButtonAvocado"> > </span>
-                                              </div>
-                                            </div>
-
-                                              </figcaption>
+                                            <span id="decrementButtonApple"> - </span>
+                                              <span type="number" id="currentCountApple">1</span>
+                                            <span data-name="Apples" data-price="40" class="add-to-cart" id="incrementButtonApple"> + </span>
                                           </div>
-                                      </a>
-                                  </div>
-                                </figure>
-
-                                <figure class="snip1246">
-                                  <div class="col-md-4 col-sm-6 col-xs-12 xs-margin-nineteen-bottom">
-                                      <a href="#0" class="block">
-                                          <div class="feature feature-7 boxed text-center imagebg section--ken-burns" data-overlay="6">
-                                              <div class="background-image-holder"> <img alt="background" src="img/banana.jpg"> </div>
-
-                                              <figcaption>
-                                                <h2 style="color:orange;" class="text-orange text-center">Bananas</h2>
-                                                <div id="bananas_details">
-                                                <p>Has Nutrients That Moderate Blood Sugar Levels </p>
-                                                <div style="font-weight:bold; color:orange; font-size:25px;" class="price">Kes 10.00 </div>
-                                                <a onclick="bananas_pluminus()" href="#0" data-price="10.00" class="add-to-cart">Add to basket</a>
-                                              </div>
-
-                                              <div id="bananas_quantity" class="hide">
-                                              <div class="container">
-                                                <h4 style="text-decoration:em">How Many? <h4/>
-                                                  <br>
-                                                <span id="decrementButtonBanana"> < </span>
-                                                  <span type="number" id="currentCountBanana">0</span>
-                                                <span id="incrementButtonBanana"> > </span>
-                                              </div>
-                                            </div>
-
-                                              </figcaption>
-                                          </div>
-                                      </a>
-                                  </div>
-                                </figure>
-                                <figure class="snip1246">
-                                  <div class="col-md-4 col-sm-6 col-xs-12 xs-margin-nineteen-bottom">
-                                      <a href="#0" class="block">
-                                          <div class="feature feature-7 boxed text-center imagebg" data-overlay="6">
-                                              <div class="background-image-holder"> <img alt="background" src="img/strawberry.jpg"> </div>
-
-                                              <figcaption>
-                                                <h2 style="color:orange;" class="text-orange text-center">Strawberries</h2>
-                                                <div id="straw_details">
-                                                <p>Rich in vitamin C that boost immunity</p>
-                                                <div style="font-weight:bold; color:orange; font-size:25px;" class="price">Kes 50.00 </div>
-                                                <a onclick="straw_pluminus()" data-price="50.00" href="#0" class="add-to-cart">Add to basket</a>
-                                              </div>
-
-                                              <div id="straw_quantity" class="hide">
-                                              <div class="container">
-                                                <h4 style="text-decoration:em">How Many? <h4/>
-                                                  <br>
-                                                <span id="decrementButtonStrawberry"> < </span>
-                                                  <span type="number" id="currentCountStrawberry">0</span>
-                                                <span id="incrementButtonStrawberry"> > </span>
-                                              </div>
-                                            </div>
-
-                                              </figcaption>
-                                          </div>
-                                      </a>
-                                  </div>
-                                </figure>
-
-                                <figure class="snip1246">
-                                  <div class="col-md-4 col-sm-6 col-xs-12 xs-margin-nineteen-bottom">
-                                      <a href="#0" class="block">
-                                          <div class="feature feature-7 boxed text-center imagebg" data-overlay="6">
-                                              <div class="background-image-holder"> <img alt="background" src="img/watermelon.jpg"> </div>
-
-                                              <figcaption>
-                                                <h2 style="color:orange;" class="text-orange text-center">Water melons</h2>
-                                                <div id="melon_details">
-                                                <p>Rich in vitamin A & C for healthy skin</p>
-                                                <div style="font-weight:bold; color:orange; font-size:25px;" class="price">Kes 70.00 </div>
-                                                <a onclick="melon_pluminus()" data-price="70.00" href="#0" class="add-to-cart">Add to basket</a>
-                                              </div>
-
-                                              <div id="melon_quantity" class="hide">
-                                             <div class="container">
-                                                <h4 style="text-decoration:em">How Many? <h4/>
-                                                  <br>
-                                                <span id="decrementButtonMelon"> < </span>
-                                                  <span type="number" id="currentCountMelon">0</span>
-                                                <span id="incrementButtonMelon"> > </span>
-                                              </div>
-                                            </div>
-
-                                              </figcaption>
-                                          </div>
-                                      </a>
-                                  </div>
-                                </figure>
-
-                                <figure class="snip1246">
-                                  <div class="col-md-4 col-sm-6 col-xs-12 xs-margin-nineteen-bottom">
-                                      <a href="#0" class="block">
-                                          <div class="feature feature-7 boxed text-center imagebg" data-overlay="6">
-                                              <div class="background-image-holder"> <img alt="background" src="img/mangoes.jpg"> </div>
-
-                                              <figcaption>
-                                                <h2 style="color:orange;" class="text-orange text-center">Mangoes</h2>
-                                                <div id="mango_details">
-                                                <p>Rich in vitamin C that boosts Immunity </p>
-                                                <div style="font-weight:bold; color:orange; font-size:25px;" class="price">Kes 40.00 </div>
-                                                <a onclick="mango_pluminus()" data-price="40.00" href="#0" class="add-to-cart">Add to basket</a>
-                                              </div>
-
-                                              <div id="mango_quantity" class="hide">
-                                              <div class="container">
-                                                <h4 style="text-decoration:em">How Many? <h4/>
-                                                  <br>
-                                                <span id="decrementButtonMango"> < </span>
-                                                  <span type="number" id="currentCountMango">0</span>
-                                                <span id="incrementButtonMango"> > </span>
-                                              </div>
-                                            </div>
-
-                                              </figcaption>
-                                          </div>
-                                      </a>
-                                  </div>
-                                </figure>
+                                        </div>
+                                        </div>
+                                    </article>
                               </div>
-                          </div>
+
+                                <div class="col-sm-4">
+                                    <article class="feature feature-1">
+                                        <a href="#0" class="block"> <img alt="Image" src="img/avocado.jpg"> </a>
+                                        <div class="feature__body boxed boxed--border">
+                                          <h2 style="color:orange;" class="text-orange text-left">Avocados <span class="price-style"><em>KES 50.00</em></span></h2>
+                                          <div id="avocado_details">
+                                            <h5>Rich in Heart-Healthy Monounsaturated Fatty Acids</h5>
+                                            <a data-name="Avocados" data-price="50" style="color:orange;" onclick="avocado_pluminus()" href="#0" class="add-to-cart cd-add-to-cart">Add To Basket</a>
+                                          </div>
+
+                                          <div id="avocado_quantity" class="hide">
+                                          <div class="container text-center">
+                                            <h4 class="spacing-small" style="text-decoration:em">How Many? <h4/>
+
+                                            <span id="decrementButtonAvocado"> - </span>
+                                              <span type="number" id="currentCountAvocado">1</span>
+                                            <span data-name="Avocados" data-price="50" class="add-to-cart" id="incrementButtonAvocado"> + </span>
+                                          </div>
+                                        </div>
+                                          </div>
+                                    </article>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <article class="feature feature-1">
+                                        <a href="#0" class="block"> <img alt="Image" src="img/banana.jpg"> </a>
+                                        <div class="feature__body boxed boxed--border">
+                                          <h2 style="color:orange;" class="text-orange text-left">Bananas <span class="price-style"><em>KES 20.00</em></span></h2>
+                                          <div id="bananas_details">
+                                            <h5>Has Nutrients That Moderate Blood Sugar Levels</h5>
+                                            <a data-name="Bananas" data-price="20" style="color:orange;" onclick="bananas_pluminus()" href="#0" class="add-to-cart cd-add-to-cart">Add To Basket</a>
+                                          </div>
+
+                                          <div id="bananas_quantity" class="hide">
+                                          <div class="container text-center">
+                                            <h4 class="spacing-small" style="text-decoration:em">How Many? <h4/>
+
+                                            <span id="decrementButtonBanana"> - </span>
+                                              <span type="number" id="currentCountBanana">1</span>
+                                            <span data-name="Bananas" data-price="20" class="add-to-cart" id="incrementButtonBanana"> + </span>
+                                          </div>
+                                        </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <article class="feature feature-1">
+                                        <a href="#0" class="block"> <img alt="Image" src="img/strawberry.jpg"> </a>
+                                        <div class="feature__body boxed boxed--border">
+                                          <h2 style="color:orange;" class="text-orange text-left">Berries <span class="price-style"><em>KES 50.00</em></span></h2>
+                                          <div id="straw_details">
+                                            <h5>Rich in vitamin C that boost immunity</h5>
+                                            <a data-name="Strawberries" data-price="50" style="color:orange;" onclick="straw_pluminus()" href="#0" class="add-to-cart cd-add-to-cart">Add To Basket</a>
+                                          </div>
+
+                                          <div id="straw_quantity" class="hide">
+                                          <div class="container text-center">
+                                            <h4 class="spacing-small" style="text-decoration:em">How Many? <h4/>
+
+                                            <span id="decrementButtonStrawberry"> - </span>
+                                              <span type="number" id="currentCountStrawberry">1</span>
+                                            <span data-name="Strawberries" data-price="50" class="add-to-cart" id="incrementButtonStrawberry"> + </span>
+                                          </div>
+                                        </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <article class="feature feature-1">
+                                        <a href="#0" class="block"> <img alt="Image" src="img/watermelon.jpg"> </a>
+                                        <div class="feature__body boxed boxed--border">
+                                          <h2 style="color:orange;" class="text-orange text-left">Melons <span class="price-style"><em>KES 100.00</em></span></h2>
+                                          <div id="melon_details">
+                                            <h5>Rich in vitamin A & C for healthy skin</h5>
+                                            <a data-name="Watermelon" data-price="100" style="color:orange;" onclick="melon_pluminus()" href="#0" class="add-to-cart cd-add-to-cart">Add To Basket</a>
+                                          </div>
+
+                                        <div id="melon_quantity" class="hide">
+                                       <div class="container text-center">
+                                          <h4 class="spacing-small" style="text-decoration:em">How Many? <h4/>
+
+                                          <span id="decrementButtonMelon"> - </span>
+                                            <span type="number" id="currentCountMelon">1</span>
+                                          <span data-name="Watermelon" data-price="100" class="add-to-cart" id="incrementButtonMelon"> + </span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    </article>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <article class="feature feature-1">
+                                        <a href="#0" class="block"> <img alt="Image" src="img/mangoes.jpg"> </a>
+                                        <div class="feature__body boxed boxed--border">
+                                          <h2 style="color:orange;" class="text-orange text-left">Mangoes <span class="price-style"><em>KES 50.00</em></span></h2>
+                                          <div id="mango_details">
+                                            <h5>Rich in vitamin C that boosts Immunity </h5>
+                                            <a data-name="mango" data-price="50" style="color:orange;" onclick="mango_pluminus()" href="#0" class="add-to-cart cd-add-to-cart">Add To Basket</a>
+                                          </div>
+
+                                          <div id="mango_quantity" class="hide">
+                                          <div class="container text-center">
+                                            <h4 class="spacing-small" style="text-decoration:em">How Many? <h4/>
+
+                                            <span id="decrementButtonMango"> - </span>
+                                              <span type="number" id="currentCountMango">1</span>
+                                            <span data-name="mango" data-price="50" class="add-to-cart" id="incrementButtonMango" class="cd-add-to-cart"> + </span>
+                                          </div>
+                                        </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
                       </section>
-                  </div>
 
-  <div class="cd-cart-container empty">
-	<a href="#0" class="cd-cart-trigger">
-		Basket
-		<ul class="count"> <!-- cart items count -->
-			<li>0</li>
-			<li>0</li>
-		</ul> <!-- .count -->
-	</a>
 
-	<div class="cd-cart">
-		<div class="wrapper">
-			<header>
-				<h2>Basket</h2>
-				<span class="undo">Item removed. <a href="#0">Undo</a></span>
-			</header>
 
-			<div class="body">
-				<ul>
-					<!-- products added to the cart will be inserted here using JavaScript -->
-				</ul>
-			</div>
+                      <nav class="navbar navbar-inverse bg-inverse fixed-bottom bg-faded">
+        <div class="row">
+            <div class="col">
 
-			<footer>
-				<a href="#0" class="checkout btn"><em>Checkout - $<span>0</span></em></a>
-			</footer>
-		</div>
-	</div> <!-- .cd-cart -->
-</div> <!-- cd-cart-container -->
+                    <i data-toggle="modal" data-target="#cart" class="fa fa-shopping-basket" aria-hidden="true"><span class="total-count"></span></i>
+              <button class="clear-cart btn btn-danger">X</button></div>
+
+        </div>
+
+    </nav>
 
             </section>
 
-            <section class="text-center bg--dark">
+            <section class="text-center bg--dark" >
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-md-6">
                             <div class="cta">
-                                <a onclick="myFunction()" class="btn btn--primary btn--lg type--uppercase" href="#show-more"> <span class="btn__text">
-                            Join frootly</span> </a>
-                            <br/><br/>
                                 <p class="lead"> Join the frootly family and be part of the healthy revolution</p>
-                                <br/>
+                            <br/>
+                                <a onclick="myFunction()" class="btn btn--primary btn--lg type--uppercase inner-link" href="#show-more"> <span class="btn__text">
+                            Join frootly</span> </a>
+                                <br/><br>
                             </div>
                         </div>
                     </div>
@@ -400,7 +346,37 @@
                         </div>
             </section>
 
-        </div>
+
+
+            <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <img style="width:10%;" src="img/logo-frootly.png"><h2 class="modal-title" id="exampleModalLabel">Your Frootly Basket</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span style="font-size:200%; color:;" aria-hidden="true">×</span>
+                    </button>
+                  </div>
+
+                  <div>
+                    <table class="show-cart table">
+
+                    </table>
+                    <div><p style="font-size:19px; font-weight:bolder; padding-right:9%; padding-top:2%;" class="text-right">Total price: KES <i><strong><span style="color:#fe9c0e; padding-left:3%; font-weight:bolder; font-size:25px;" class="total-cart"></span></strong></i></p></div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <a id="thursday" style="background-color:white;" data-dismiss="modal" class="btn btn--primary">
+                        <span style="color:#fe9c0c;" class="btn__text">Keep Shopping</span>
+                      </a>
+                    <button type="button" class="btn btn-primary">Order now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
 
 <script>
 function apple_pluminus(){
@@ -481,13 +457,13 @@ function mybasket(){
             }
         }
         </script>
-        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/parallax.js"></script>
         <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/custom-scripts.js"></script>
-        <script src="js/pluminus.js"></script>
-        <script src="js/frootly-add-to-cart.js"></script>
+
     </body>
 
 </html>

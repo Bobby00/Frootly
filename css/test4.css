@@ -10,16 +10,9 @@
   vertical-align: top;
 }
 .snip1246 figcaption {
-  top: 10px;
-  left: 10px;
-  right: 5px;
-  bottom: 10px;
-  padding: 15px;
-  position: absolute;
-  opacity: 0;
-  z-index: 1;
-  -webkit-transform: translateY(40px);
-  transform: translateY(40px);
+background-color: green;
+margin-top: 0px;
+
 }
 .snip1246 h2,
 .snip1246 p {
@@ -41,23 +34,19 @@
   text-transform: uppercase;
   font-size: 1.5em;
 }
-.snip1246 .add-to-cart {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 20px;
-  padding: 0.2em 0.5em;
-  border: 2px solid #fe9c0e;
-  padding: 0.5em 1em;
+.cd-add-to-cart {
+  margin-left: 55%;
+  border: 1px solid #fe9c0e;
+  padding: 0.7em 1em;
   font-size: 0.9em;
   text-decoration: none;
-  color: #000000;
   font-weight: 600;
   border-radius: 3px;
 }
-.snip1246 .add-to-cart:hover {
-  background-color: #fe9c0e;
+.cd-add-to-cart:hover {
   color: #ffffff;
+  background-color: #fe9c0e;
+  text-decoration: none;
 }
 .snip1246:after {
   background-color: #ffffff;
@@ -91,4 +80,14 @@
   transform: rotateX(0);
   opacity: 0.9;
 }
-/* Demo purposes only */
+.price-style {
+  font-size: 14px;
+  background-color: orange;
+  color: white;
+  margin-left:15%;
+  border-radius: 6px;
+  padding: 3px;
+}
+.spacing-small{
+  padding-bottom: 6px;
+}

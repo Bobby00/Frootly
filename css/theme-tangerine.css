@@ -2254,7 +2254,7 @@ section.slider .flickity-page-dots {
 }
 .notification .notification-close-cross:before {
   content: '\00D7';
-  font-size: 1.5em;
+  font-size: 300%;
 }
 .notification .notification-close-cross:hover {
   opacity: 1;
@@ -2835,7 +2835,7 @@ a {
   background: rgba(250, 250, 250, 0.2);
 }
 .bg--primary-1 {
-  background: #006e90;
+  background: #7c9330;
 }
 .bg--primary-1 p,
 .bg--primary-1 span,
@@ -4405,7 +4405,7 @@ hr[data-title]:before {
   position: relative;
 }
 .btn:not([class*='primary']) {
-  border-color: #fe9c0e;
+  border-color:;
 }
 .btn:not([class*='primary']):hover {
   border-color: #252525;
@@ -5709,12 +5709,7 @@ p .material-icons:first-child {
 .bg--primary .boxed:not(.imagebg) i {
   color: #252525;
 }
-.bg--primary .boxed:not(.imagebg) a {
-  color: #f18f01;
-}
-.bg--primary .boxed:not(.imagebg) .color--primary {
-  color: #f18f01 !important;
-}
+
 @media all and (min-width: 768px) {
   .boxed.boxed--emphasis {
     transform: scale(1.075);
@@ -7128,8 +7123,7 @@ button.btn,
 input[type="submit"].btn {
   font-size: 0.85714286em;
   font-weight: 700;
-  padding-left: 0;
-  padding-right: 0;
+
 }
 button.btn.btn--primary,
 input[type="submit"].btn.btn--primary {
@@ -7182,7 +7176,7 @@ input[type] + input[type],
 input[type] + .input-checkbox,
 input[type] + button,
 input[type] + .input-select {
-  margin-top: 0.92857143em;
+  margin-top: 0px;
 }
 input,
 [class*='input-'] label,
