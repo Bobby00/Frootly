@@ -62,70 +62,13 @@
 .show-cart li {
   display: flex;
 }
-.form-control+.input-group-addon:not(:first-child) {
-  background-color: #7c9330;
-  border-color: #7c9330;
-  padding-left: 4%;
-  padding-right: 4%;
-  border-radius: 0% 50% 50% 0%;
-}
-.minus-item {
-  background-color: #7c9330;
-  border-color: #7c9330;
-  padding-left: 5%;
-  padding-right: 5%;
-  border-radius: 50% 0% 0% 50%;
-}
-.minus-item:hover {
-  background-color: #7c9330;
-  border-color: #7c9330;
-  padding-left: 5%;
-  padding-right: 5%;
-  border-radius: 50% 0% 0% 50%;
-}
-.delete-item {
-  padding-left: 40%;
-  padding-right: 40%;
-  border-radius: 100%;
-  background-color: white;
-  color: #7c9330;
-  border-color: #7c9330;
-}
-.delete-item:hover {
-  padding-left: 40%;
-  padding-right: 40%;
-  border-radius: 100%;
-  background-color: #7c9330;
-  color: white;
-  border-color: white;
-}
-.input-group .form-control:not(:first-child):not(:last-child), .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child){
-  height: auto;
-}
-.table td, .table th {
-  padding: 0.7rem;
-  font-size: 17px;
-  vertical-align: 0px;
-}
-.cart-style-1 {
-  height: 13%;
-  width: 13%;
-  padding:10px;
-  border-radius: 50%;
-  background-color: #fe9c0e;
-}
-.cart-style-1:hover {
-  height: 13%;
-  width: 13%;
-  padding:10px;
-  border-radius: 50%;
-  background-color: #fe9c0e;
-}
+
+
 .fa-shopping-basket {
-  font-size: 350%;
+  font-size: 450%;
   color: white;
   background-color: #7c9330;
-  right: 3%;
+  right: 20%;
   padding: 10px;
   border-radius: 50%;
   position: relative;
@@ -135,9 +78,10 @@
   display: none;
 }
 .fa-shopping-basket:hover {
-  right: 3%;
+  right: 1%;
   padding: 10px;
-  font-size: 370%;
+  right: 15%;
+  font-size: 470%;
   background-color: white;
   color: #7c9330;
   cursor: pointer;
@@ -156,6 +100,7 @@
   padding: 3% 6% 3% 6%;
   border-radius: 50%;
   color: #7c9330;
+  right: -13%;
 
 }
 .total-count:hover {
@@ -166,5 +111,51 @@
   position: absolute;
   background-color: white;
   padding: 3% 6% 3% 6%;
-  border-radius: 50%;
+  border-radius: 20px;
 }
+#background-nav {
+  background-image: url(../img/fruit_1.gif);
+  background-repeat: no-repeat;
+  background-size: 35%;
+}
+.delete-item {
+  font-family: cursive;
+  padding: 4px 7px 4px 7px;
+  color: #fe9c0e;
+
+}
+.delete-item:hover {
+  font-family: cursive;
+  padding: 4px 7px 4px 7px;
+  cursor: pointer;
+  color: white;
+  background-color: #fe9c0e;
+  border-radius: 20px;
+}
+.minus-item, .plus-item {
+  color: green;
+  background-color: white;
+  border-radius: 20px;
+  padding: 3px 7px 3px 7px;
+  font-size: 20px;
+  font-weight: 1000;
+}
+.plus-item:hover {
+  color: white;
+  cursor: pointer;
+  background-color: green;
+  border-radius: 20px;
+  padding: 3px 7px 3px 7px;
+  font-size: 20px;
+  font-weight: 1000;
+}
+.minus-item:hover {
+  color: white;
+  cursor: pointer;
+  background-color: green;
+  border-radius: 20px;
+  padding: 3px 7px 3px 7px;
+  font-size: 20px;
+  font-weight: 1000;
+}
+.item-couunt {}

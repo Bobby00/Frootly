@@ -7196,7 +7196,7 @@ button[type="submit"]:not([class*='col-']) {
 input[type],
 select,
 textarea {
-  padding-left: 0.92857143em;
+  padding-left: 0.1em;
 }
 input[type]:focus,
 select:focus,

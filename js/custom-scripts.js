@@ -223,6 +223,14 @@ var shoppingCart = (function() {
     return Number(totalCart.toFixed(2));
   }
 
+  obj.totalTotal = function() {
+    var totalCart = 0;
+    for(var item in cart) {
+      totalCart += cart[item].price * cart[item].count;
+    }
+    return Number(totalCart.toFixed(2))+200;
+    }
+
   // List cart
   obj.listCart = function() {
     var cartCopy = [];
@@ -277,20 +285,22 @@ function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
   for(var i in cartArray) {
-    output += "<tr>"
+    output += "<tr class='table-striped'>"
+
       + "<td>" + cartArray[i].name + "</td>"
       + "<td>(" + cartArray[i].price + ")</td>"
-      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+      + "<td><div class='input-group'><span class='minus-item' data-name=" + cartArray[i].name + ">-</span>"
       + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-      + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+      + "<span class='plus-item' data-name=" + cartArray[i].name + ">+</span></div></td>"
       + " = "
       + "<td>" + cartArray[i].total + "</td>"
+      + "<td><span class='delete-item' data-name=" + cartArray[i].name + ">X</span></td>"
       +  "</tr>";
   }
   $('.show-cart').html(output);
   $('.total-cart').html(shoppingCart.totalCart());
   $('.total-count').html(shoppingCart.totalCount());
+  $('.total-total').html(shoppingCart.totalTotal());
 }
 
 // Delete item button

@@ -11,6 +11,7 @@
         <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
         <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="css/theme-tangerine.css" rel="stylesheet" type="text/css" media="all" />
+
         <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="css/test4.css"/>
@@ -37,11 +38,11 @@
                         </div>
                     </div>
                 </nav>
-                <div class="notification pos-right pos-top side-menu bg--white" data-notification-link="sidebar-menu" data-animation="from-right">
+                <div class="notification pos-right pos-top side-menu bg--white" data-notification-link="sidebar-menu" id="background-nav" data-animation="from-right">
                     <div class="side-menu__module pos-vertical-center text-right">
                         <ul class="menu-vertical">
                             <li class="h4"> <a href="#">Home</a> </li>
-                            <li class="h4"> <a href="#">Fruit baskets</a> </li>
+                            <li class="h4"> <a onclick="mybasket()" class="inner-link" href="#show-basket">Fruit baskets</a> </li>
                             <li class="h4"> <a href="#">About us</a> </li>
                         </ul>
                     </div>
@@ -104,7 +105,7 @@
             <section class="switchable bg--secondary">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
                             <div class="switchable__text" id="show">
                                 <div class="switchable__text">
                                     <h2>Frootly Fruit Basket of the day</h2>
@@ -119,9 +120,9 @@
                          </div>
 
                         </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
                             <div class="pricing pricing-2 boxed boxed--border boxed--lg">
-                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-md-6 col-sm-12 col-xs-6">
 																<ul>
                                         <li><span class="checkmark bg--primary-1"></span><span>5 delicious bananas</span></li>
                                         <li><span class="checkmark bg--primary-1"></span><span>3 apples</span></li>
@@ -131,12 +132,12 @@
                                     </ul>
 
                                 </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                                <div class="col-md-6 col-sm-12 col-xs-6 text-center">
                                     <h5>Available</h5> <span class="h1"><p>599</p></span>
                                     <p class="type--fine-print">Kenya Shillings</p>
 
                                 </div>
-																<a style="margin-top:30px;" class="btn btn--primary" href="#"> <span class="btn__text">PURCHASE BASKET</span> </a>
+																<a style="margin-top:30px;" class="btn btn--primary center" href="#"> <span class="btn__text">PURCHASE BASKET</span> </a>
                             </div>
 
                         </div>
@@ -151,7 +152,7 @@
                             <h2 class="text-center">Select Your Fruit(s)</h2>
                             <br/>
                               <div class="row">
-                                <div class="col-sm-4">
+                                <div class="col-sm-6 col-md-4 col-lg-4">
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/apple.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
@@ -174,7 +175,7 @@
                                     </article>
                               </div>
 
-                                <div class="col-sm-4">
+                                <div class="col-sm-6 col-md-4 col-lg-4">
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/avocado.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
@@ -197,7 +198,7 @@
                                     </article>
                                 </div>
 
-                                <div class="col-sm-4">
+                                <div class="col-sm-6 col-md-4 col-lg-4">
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/banana.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
@@ -220,7 +221,7 @@
                                     </article>
                                 </div>
 
-                                <div class="col-sm-4">
+                                <div class="col-sm-6 col-md-4 col-lg-4">
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/strawberry.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
@@ -243,7 +244,7 @@
                                     </article>
                                 </div>
 
-                                <div class="col-sm-4">
+                                <div class="col-sm-6 col-md-4 col-lg-4">
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/watermelon.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
@@ -266,7 +267,7 @@
                                     </article>
                                 </div>
 
-                                <div class="col-sm-4">
+                                <div class="col-sm-6 col-md-4 col-lg-4">
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/mangoes.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
@@ -299,8 +300,8 @@
         <div class="row">
             <div class="col">
 
-                    <i data-toggle="modal" data-target="#cart" class="fa fa-shopping-basket" aria-hidden="true"><span class="total-count"></span></i>
-              <button class="clear-cart btn btn-danger">X</button></div>
+                    <i data-toggle="modal" data-target="#cart" class="fa fa-shopping-basket slideInUp" aria-hidden="true"><span class="total-count"></span></i>
+              <!-- <button class="clear-cart btn btn-danger">X</button></div> -->
 
         </div>
 
@@ -362,18 +363,24 @@
                     <table class="show-cart table">
 
                     </table>
-                    <div><p style="font-size:19px; font-weight:bolder; padding-right:9%; padding-top:2%;" class="text-right">Total price: KES <i><strong><span style="color:#fe9c0e; padding-left:3%; font-weight:bolder; font-size:25px;" class="total-cart"></span></strong></i></p></div>
+                    <div>
+                      <p style="font-size:16px; padding-right:9%;" class="text-right">Price: Ksh <i><strong><span style="color:#fe9c0e; font-weight:bolder; font-size:20px;" class="total-cart"></span></strong><span style="color:#fe9c0e; font-weight:bolder; font-size:20px;">/=</span></i></p>
+                      <p style="font-size:16px; padding-right:9%;" class="text-right">Transit: Ksh <i><strong><span style="color:#fe9c0e;  font-weight:bolder; font-size:20px;">200/=</span></strong></i></p>
+                      <p style="font-size:19px; font-weight:bolder; padding-right:9%; padding-top:2%;" class="text-right">Total price: KES <i><strong><span style="color:#fe9c0e; padding-left:3%; font-weight:bolder; font-size:25px;" class="total-total"></span></strong></i></p>
+                    </div>
                   </div>
 
                   <div class="modal-footer">
-                    <a id="thursday" style="background-color:white;" data-dismiss="modal" class="btn btn--primary">
-                        <span style="color:#fe9c0c;" class="btn__text">Keep Shopping</span>
+                    <a id="thursday" style="background-color:white; border-color:#7c9330;" data-dismiss="modal" class="btn btn--primary">
+                        <span style="color:#7c9330;" class="btn__text">Keep Shopping</span>
                       </a>
-                    <button type="button" class="btn btn-primary">Order now</button>
+                    <button style="border-color:fe9c0e;" type="button" class="btn btn-primary">Order now</button>
                   </div>
                 </div>
               </div>
             </div>
+
+
 
 
 
