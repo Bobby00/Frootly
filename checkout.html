@@ -1,66 +1,59 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
-    <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href="css/theme-tangerine.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/test4.css"/>
-    <link rel="icon" href="img/logo-frootly.png"/>
-
-
-  </head>
-  <body>
-    <div class="container">
-    <section class="text-center bg--dark" >
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-md-6">
-                    <div class="cta">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container"  id="show-more">
+    </head>
+    <body data-smooth-scroll-offset="77">
+        <div class="nav-container"> </div>
+        <div class="main-container">
+            <section class="switchable imagebg" data-overlay="4">
+                <div class="background-image-holder"> <img alt="background" src="img/hero-1.jpg"> </div>
+                <div class="container">
                     <div class="row">
-                        <div class="col-md-5 col-sm-7">
-                            <h3>Enter Your Billing Information</h3>
-
-                            <hr class="short">
-                            <form action="frootly.php" method="post" enctype="multipart/form-data" autocomplete= "off">
-                                <div class="row">
-                                    <div class="col-xs-12"> <input style="margin-bottom:1%;" type="text" name="uname" placeholder="Your Name" required> </div>
-                                    <div class="col-xs-12"> <input style="margin-bottom:1%;" type="email" name="email" placeholder="Email Address" required> </div>
-                                    <div class="col-xs-12"> <input style="margin-bottom:1%;" type="text" name="phoneno" placeholder="Phone number (+254)" required> </div>
-                                    <div class="col-xs-12"> <textarea style="padding-bottom:20px;" type="text" name="phoneno" placeholder="Order Notes (Specifics)" required></textarea> </div>
-
-                                    <div style="margin-top:10%;" class="col-xs-12"><button class="btn btn--primary btn--lg type--uppercase" type="submit" name="submit">Subscribe</button></div>
-                                  </hr>
-
-                                </div>
-                            </form>
+                        <div class="col-sm-8 col-md-7">
+                            <ul class="accordion accordion-1 accordion--oneopen">
+                                <li class="active">
+                                    <div class="accordion__title"> <span class="h5">Code Quality</span> </div>
+                                    <div class="accordion__content">
+                                        <p class="lead"> Stack follows the BEM naming convention that focusses on logical code readability that is reflected in both the HTML and CSS. Interactive elements such as accordions and tabs follow the same markup patterns making rapid development easier for developers and beginners alike. </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="accordion__title"> <span class="h5">Visual Design</span> </div>
+                                    <div class="accordion__content">
+                                        <p class="lead"> Stack offers a clean and contemporary to suit a range of purposes from corporate, tech startup, marketing site to digital storefront. Elements have been designed to showcase content in a diverse yet consistent manner. </p>
+                                        <p class="lead"> Multiple font and colour scheme options mean that dramatically altering the look of your site is just clicks away — Customizing your site in the included Variant Page Builder makes experimenting with styles and content arrangements dead simple. </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="accordion__title"> <span class="h5">Stack Experience</span> </div>
+                                    <div class="accordion__content">
+                                        <p class="lead"> Medium Rare is an elite author known for offering high-quality, high-value products backed by timely and personable support. Recognised and awarded by Envato on multiple occasions for producing consistently outstanding products, it's no wonder over 20,000 customers enjoy using Medium Rare templates. </p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="video-cover border--round box-shadow">
+                                <div class="background-image-holder"> <img alt="image" src="img/agency-2.jpg"> </div>
+                                <div class="video-play-icon"></div> <iframe data-src="https://www.youtube.com/embed/6p45ooZOOPo?autoplay=1" allowfullscreen="allowfullscreen"></iframe> </div> <span>Stack includes Variant Page Builder — used by over <strong>17,000</strong> customers <a target="_blank" href="#customise-template">Try Now  ↗</a></span> </div>
                     </div>
                 </div>
-    </section>
-  </div>
+            </section>
+        </div>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/scripts.js"></script>
 
+    </body>
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/custom-scripts.js"></script>
-  </body>
 </html>

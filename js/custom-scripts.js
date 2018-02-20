@@ -223,12 +223,18 @@ var shoppingCart = (function() {
     return Number(totalCart.toFixed(2));
   }
 
+  var transit = 200;
+
   obj.totalTotal = function() {
     var totalCart = 0;
+
     for(var item in cart) {
       totalCart += cart[item].price * cart[item].count;
     }
-    return Number(totalCart.toFixed(2))+200;
+    if (totalCart == 0){
+      return totalCart;
+    }
+    return Number(totalCart.toFixed(2))+transit;
     }
 
   // List cart
@@ -287,14 +293,14 @@ function displayCart() {
   for(var i in cartArray) {
     output += "<tr class='table-striped'>"
 
-      + "<td>" + cartArray[i].name + "</td>"
-      + "<td>(" + cartArray[i].price + ")</td>"
-      + "<td><div class='input-group'><span class='minus-item' data-name=" + cartArray[i].name + ">-</span>"
+      + "<td class='cart-edit'>" + cartArray[i].name + "</td>"
+      + "<td class='cart-edit'>(" + cartArray[i].price + ")</td>"
+      + "<td><div class='input-group'><span class='minus-item' data-name=" + cartArray[i].name + "><i id='minus-button-style' class='fa fa-minus-circle'></i></span>"
       + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-      + "<span class='plus-item' data-name=" + cartArray[i].name + ">+</span></div></td>"
+      + "<span class='plus-item' data-name=" + cartArray[i].name + "><i id='plus-button-style' class='fa fa-plus-circle'></i></span></div></td>"
       + " = "
-      + "<td>" + cartArray[i].total + "</td>"
-      + "<td><span class='delete-item' data-name=" + cartArray[i].name + ">X</span></td>"
+      + "<td Class='cart-edit'>" + cartArray[i].total + "</td>"
+      + "<td><span class='delete-item' data-name=" + cartArray[i].name + "><i class='fa fa-times-circle'></i></span></td>"
       +  "</tr>";
   }
   $('.show-cart').html(output);
@@ -310,6 +316,15 @@ $('.show-cart').on("click", ".delete-item", function(event) {
   shoppingCart.removeItemFromCartAll(name);
   displayCart();
 })
+
+// Minus Items from main Html fruits cart div
+
+$('#decrementButtonApple').on("click", ".delete-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCart(name);
+  displayCart();
+})
+
 
 
 // -1
