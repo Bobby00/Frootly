@@ -155,3 +155,8 @@
 #minus-button-style:before{
   color: #fe9c0e;
 }
+#sticky-sidebar {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 10px;
+}

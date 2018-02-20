@@ -2776,8 +2776,8 @@ a {
 }
 .bg--primary p,
 .bg--primary span,
-.bg--primary ul,
-.bg--primary a:not(.btn) {
+.bg--primary ul
+ {
   color: #fff;
 }
 .bg--primary h1,
