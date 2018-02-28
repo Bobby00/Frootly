@@ -22,7 +22,7 @@
     <body data-smooth-scroll-offset="77">
         <div class="nav-container">
             <div class="via-1506805086708" via="via-1506805086708" vio="frootly">
-                <nav class="bar bar-toggle bar--absolute">
+                <nav style="position:absolute;" class="bar bar-toggle bar--absolute">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-1 col-sm-2 col-xs-3">
@@ -82,7 +82,7 @@
             <section>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                        <div class="col-md-12 col-sm-12">
                             <div class="process-1">
                                 <div class="process__item">
                                     <h4>Select your preferred fruit basket</h4>
@@ -102,27 +102,30 @@
                 </div>
               </div>
             </section>
-            <section class="switchable bg--secondary">
+
+            <section style="padding-top:3.42857143em; padding-bottom:3.42857143em;" class="switchable image-background" data-overlay="5">
+
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+                        <div class="col-sm-12 col-md-5 col-lg-6 col-xs-12">
                             <div class="switchable__text" id="show">
                                 <div class="switchable__text">
-                                    <h2>Frootly Fruit Basket of the day</h2>
-                                    <p class="lead"> Each basket is filled with all the necessary ingredients you will need for a healthy life full of energy</p>
+                                    <h2 style="color:white;">Frootly Fruit Basket of the day</h2>
+                                    <p style="color:white;" class="lead"> Each basket is filled with all the necessary ingredients you will need for a healthy life full of energy</p>
 
                              </div>
 														 <hr class="short">
-														 <a style="background-color:white;" onclick="mybasket()" href="#show-basket" class="btn btn--primary inner-link">
-	                               <span style="color:#fe9c0c;" class="btn__text">Create your own basket</span>
+														 <a style="background-color:white; padding-left:10px;" onclick="mybasket()" href="#show-basket" class="btn btn--primary inner-link">
+                               <i style="font-size:25px; color:#7c9330; padding-right:10px;" class="fa fa-shopping-basket"></i>
+	                               <span style="color:#fe9c0c; font-size:15px;" class="btn__text"> Create Your Own Basket</span>
                                </a>
 
                          </div>
 
                         </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+                        <div class="col-sm-12 col-md-7 col-lg-6 col-xs-12">
                             <div class="pricing pricing-2 boxed boxed--border boxed--lg">
-                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-md-6 col-sm-7 col-xs-12">
 																<ul>
                                         <li><span class="checkmark bg--primary-1"></span><span>5 delicious bananas</span></li>
                                         <li><span class="checkmark bg--primary-1"></span><span>3 apples</span></li>
@@ -132,12 +135,12 @@
                                     </ul>
 
                                 </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 text-center">
-                                    <h5>Available</h5> <span class="h1"><p>599</p></span>
+                                <div class="col-md-6 col-sm-5 col-xs-12 text-center">
+                                    <h5>Price</h5> <span class="h1"><p>599</p></span>
                                     <p class="type--fine-print">Kenya Shillings</p>
-
+                                    <a style="margin-top:30px; padding-right:20px; padding-left:20px;" class="btn btn--primary center" href="#"> <span class="btn__text">PURCHASE BASKET</span> </a>
                                 </div>
-																<a style="margin-top:30px;" class="btn btn--primary center" href="#"> <span class="btn__text">PURCHASE BASKET</span> </a>
+
                             </div>
 
                         </div>
@@ -300,7 +303,7 @@
         <div class="row">
             <div class="col">
 
-                    <i data-toggle="modal" data-target="#cart" class="fa fa-shopping-basket slideInUp" aria-hidden="true"><span class="total-count"></span></i>
+                    <i data-toggle="modal" data-target="#cart" class="fa fa-shopping-basket for-checkout" aria-hidden="true"><span class="total-count"></span></i>
               <!-- <button class="clear-cart btn btn-danger">X</button></div> -->
 
         </div>
@@ -347,6 +350,27 @@
                         </div>
             </section>
 
+            <footer  style="padding-bottom:10px; padding-top:30px;" class="footer-3 text-center-xs space--xs footer-style">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8"> <img style="max-height:2.07142857em;" alt="Image" class="logo" src="img/logo-frootly3.png">
+
+                        </div>
+                        <div class="col-sm-4 text-right text-right-xs">
+                            <ul class="social-list list-inline list--hover">
+                                <li><a href="#"><i style="color:#ffffff;" class="socicon socicon-google icon icon--xs"></i></a></li>
+                                <li><a href="#"><i style="color:#ffffff;" class="socicon socicon-twitter icon icon--xs"></i></a></li>
+                                <li><a href="#"><i style="color:#ffffff;" class="socicon socicon-facebook icon icon--xs"></i></a></li>
+                                <li><a href="#"><i style="color:#ffffff;" class="socicon socicon-instagram icon icon--xs"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-left text-center-xs"> <span style="color:black; font-weight:bolder;" class="type--fine-print">© <span style="color:black; font-weight:bolder;" class="update-year"></span> Frootly.</span> <a style="color:black; font-weight:bolder;" class="type--fine-print" href="#">Privacy Policy</a> <a style="color:black; font-weight:bolder;" class="type--fine-print" href="#">Legal</a> </div>
+                    </div>
+                </div>
+            </footer>
+
 
 
             <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -371,10 +395,10 @@
                   </div>
 
                   <div class="modal-footer">
-                    <a id="thursday" style="background-color:white; border-color:#7c9330;" data-dismiss="modal" class="btn btn--primary">
-                        <span style="color:#7c9330;" class="btn__text">Keep Shopping</span>
+                    <a id="thursday" style="background-color:white;" data-dismiss="modal" class="btn btn--primary">
+                        <span style="color:#fe9c0c;" class="btn__text">Keep Shopping</span>
                       </a>
-                    <button style="border-color:fe9c0e;" type="button" class="btn btn-primary">Order now</button>
+                    <button id="order-style" style="border:0px; background-color:#7c9330;" onclick="window.location.href='checkout.html'" class="btn btn-primary">Order now</button>
                   </div>
                 </div>
               </div>

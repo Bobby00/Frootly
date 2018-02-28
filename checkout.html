@@ -9,176 +9,252 @@
       <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
       <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
       <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+
       <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+      <link href="css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
       <link href="css/theme-tangerine.css" rel="stylesheet" type="text/css" media="all" />
 
       <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+      <link href="css/location-api.css" rel="stylesheet" type="text/css" media="all" />
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
       <link rel="stylesheet" href="css/test4.css"/>
       <link rel="icon" href="img/logo-frootly.png"/>
 
-      <style>
-        /* Always set the map height explicitly to define the size of the div
-         * element that contains the map. */
-        #map {
-          height: 100%;
-        }
-        /* Optional: Makes the sample page fill the window. */
-        html, body {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-        }
-      </style>
 
-      <style>
-        #locationField, #controls {
-          position: relative;
-          width: 480px;
-        }
-        #autocomplete {
-          position: absolute;
-          top: 0px;
-          left: 0px;
-          width: 99%;
-        }
-        .label {
-          text-align: right;
-          font-weight: bold;
-          width: 100px;
-          color: #303030;
-        }
-        #address {
-          border: 1px solid #000090;
-          background-color: #f0f0ff;
-          width: 480px;
-          padding-right: 2px;
-        }
-        #address td {
-          font-size: 10pt;
-        }
-        .field {
-          width: 99%;
-        }
-        .slimField {
-          width: 80px;
-        }
-        .wideField {
-          width: 200px;
-        }
-        #locationField {
-          height: 20px;
-          margin-bottom: 2px;
-        }
-      </style>
+
+
 
     </head>
     <body data-smooth-scroll-offset="77">
-        <div class="nav-container"> </div>
+
+      <section>
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 col-md-8 col-md-offset-2">
+                      <div class="wizard">
+                          <h5>Intro</h5>
+                          <section class="text-center">
+                              <div class="pos-vertical-center">
+                                  <h4>Welcome to the Wizard, using jQuery Steps</h4>
+                              </div>
+                          </section>
+                          <h5>Navigation</h5>
+                          <section class="text-center">
+                              <div class="pos-vertical-center">
+                                  <h4>Navigate the steps using your keyboard arrows</h4>
+                              </div>
+                          </section>
+                          <h5>Finish</h5>
+                          <section class="text-center">
+                              <div class="pos-vertical-center">
+                                  <h4>Use Wizards for onboarding, form data collection and more</h4>
+                              </div>
+                          </section>
+                      </div>
+                  </div>
+              </div>
+              <!--end of row-->
+          </div>
+          <!--end of container-->
+      </section>
+
+      <div class="nav-container">
+          <div class="via-1506805086708" via="via-1506805086708" vio="frootly">
+              <nav style="background-color:black; padding-bottom:1%; opacity:0.8;" class="bar bar-toggle bar--absolute">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-1 col-sm-2 col-xs-3">
+                              <div class="bar__module">
+                                  <a href="index.html"> <img class="logo logo-dark" alt="logo" src="img/logo-frootly3.png"> <img class="logo logo-light" alt="logo"> </a>
+                              </div>
+                          </div>
+                          <div class="col-md-11 col-sm-10 col-xs-9">
+                              <div class="bar__module">
+                                  <a class="menu-toggle pull-right" href="#" data-notification-link="sidebar-menu"> <i class="stack-interface stack-menu"></i> </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </nav>
+              <div class="notification pos-right pos-top side-menu bg--white" data-notification-link="sidebar-menu" id="background-nav" data-animation="from-right">
+                  <div class="side-menu__module pos-vertical-center text-right">
+                      <ul class="menu-vertical">
+                          <li class="h4"> <a href="#">Home</a> </li>
+                          <li class="h4"> <a onclick="mybasket()" class="inner-link" href="#show-basket">Fruit baskets</a> </li>
+                          <li class="h4"> <a href="#">About us</a> </li>
+                      </ul>
+                  </div>
+                  <div class="side-menu__module pos-bottom pos-absolute col-xs-12 text-right">
+                      <ul class="social-list list-inline list--hover">
+                          <li><a href="#"><i class="socicon socicon-google icon icon--xs"></i></a></li>
+                          <li><a href="#"><i class="socicon socicon-twitter icon icon--xs"></i></a></li>
+                          <li><a href="#"><i class="socicon socicon-facebook icon icon--xs"></i></a></li>
+                          <li><a href="#"><i class="socicon socicon-instagram icon icon--xs"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+
         <div class="main-container">
 
-          <section class="switchable bg--secondary">
+          <section class="switchable bg--secondary image-background" data-overlay="5">
               <div class="container">
-                <h2>Please Enter Your Delivery Details</h2>
                   <div class="row">
-                      <div class="col-sm-12 col-md-7 col-lg-8 col-xs-12">
-                          <div class="switchable__text" id="show">
-                              <div class="switchable__text">
 
-                                  <div class="switchable__text">
+                      <div class="col-sm-12 col-md-7 col-lg-8 col-xs-12">
+                        <h3 style="margin-top:1.90em;">Fill Out The Details Below to Complete Your Purchase :-)</h3>
+                        <div class="p-details-step-1 card-like">
                                 <h2>Personal Details</h2>
                                 <hr class="short">
                                 <form>
                                     <div class="row">
-                                        <div class="col-xs-6"> <input type="text" name="First Name" placeholder="Your Name"> </div>
-                                        <div class="col-xs-6"> <input type="email" name="Email Address" placeholder="Email Address"> </div>
-                                        <div class="col-xs-6"> <input type="number" name="Phone Number" placeholder="Phone Number"> </div>
-
+                                        <div class="col-xs-6"> <input type="text" name="First Name" placeholder="First Name"> </div>
+                                        <div class="col-xs-6"> <input type="text" name="First Name" placeholder="Second Name"> </div>
+                                        <div class="col-xs-12"> <input type="email" name="Email Address" placeholder="Email Address"> </div>
+                                        <div class="col-xs-12"> <input type="number" name="Phone Number " placeholder="Phone Number (+254)"> </div>
                                     </div>
-                                    <br><br>
-                                      <h2>Delivery Details</h2>
-                                      <hr class="short">
-                                      <h4>Enter Location to autofill your address </h4>
+                                    <a style="margin-top:30px; padding-right:20px; padding-left:20px;" class="btn btn--primary right" href="#"> <span class="btn__text">NEXT STEP</span> </a>
+                        </div>
+                      </div>
 
-                                      <div id="locationField">
-                                        <input id="autocomplete" placeholder="Enter your address"
+
+
+
+                          <div class="col-sm-12 col-md-7 col-lg-8 col-xs-12">
+
+                            <div class="D-details-step-2 card-like">
+                                      <h2>Delivery Details</h2>
+                                      <h4 style="color:#fafafa;">Enter Location to autofill your address </h4>
+                                      <hr class="short">
+
+                                      <div class="input-wrapper">
+                                        <i style="color:#fe9c0e;" class="search-icon fa fa-map-marker" aria-hidden="true"></i>
+                                        <input id="autocomplete" placeholder="Enter city or town"
                                                onFocus="geolocate()" type="text"></input>
                                       </div>
 
+
+
+                                      <br><br>
+
                                       <table id="address">
                                         <tr>
-                                          <td class="label">Street address</td>
-                                          <td class="slimField"><input class="field" id="street_number"
-                                                disabled="true"></input></td>
-                                          <td class="wideField" colspan="2"><input class="field" id="route"
-                                                disabled="true"></input></td>
+                                          <td class="labelqq">STREET</td>
+                                          <td class="slimField">
+                                            <input class="field" id="street_number" disabled="true"></input>
+                                          </td>
+                                            <td class="labelqq">ADDRESS</td>
+                                          <td class="wideField" colspan="2">
+                                            <input style="font-weight:bolder;" class="field" id="route" disabled="true"></input>
+                                          </td>
                                         </tr>
                                         <tr>
-                                          <td class="label">City</td>
+                                          <td class="labelqq">CITY</td>
                                           <!-- Note: Selection of address components in this example is typical.
                                                You may need to adjust it for the locations relevant to your app. See
                                                https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
                                           -->
-                                          <td class="wideField" colspan="3"><input class="field" id="locality"
-                                                disabled="true"></input></td>
+                                          <td class="wideField" colspan="3">
+                                            <input style="font-weight:bolder;" class="field" id="locality" disabled="true"></input>
+                                          </td>
                                         </tr>
                                         <tr>
-                                          <td class="label">State</td>
-                                          <td class="slimField"><input class="field"
-                                                id="administrative_area_level_1" disabled="true"></input></td>
-                                          <td class="label">Zip code</td>
-                                          <td class="wideField"><input class="field" id="postal_code"
-                                                disabled="true"></input></td>
+                                          <td class="labelqq">STATE</td>
+                                          <td class="slimField">
+                                            <input style="font-weight:bolder;" class="field" id="administrative_area_level_1" disabled="true"></input>
+                                          </td>
+                                          <td class="labelqq">ZIP CODE</td>
+                                          <td class="wideField">
+                                            <input style="font-weight:bolder;" class="field" id="postal_code" disabled="true"></input>
+                                          </td>
                                         </tr>
                                         <tr>
-                                          <td class="label">Country</td>
-                                          <td class="wideField" colspan="3"><input class="field"
-                                                id="country" disabled="true"></input></td>
+                                          <td class="labelqq">COUNTRY</td>
+                                          <td class="wideField" colspan="3"><input style="font-weight:bolder;" class="field" id="country" disabled="true"></input>
+                                          </td>
                                         </tr>
                                       </table>
-
-                                </form>
+                                      <a style="margin-top:30px; padding-right:20px; padding-left:20px; background-color:#7c9330;" class="btn btn--primary right" href="#"> <span class="btn__text">PREVIOUS STEP</span> </a>
+                                      <a style="margin-top:30px; padding-right:20px; padding-left:20px;" class="btn btn--primary right" href="#"> <span class="btn__text">NEXT STEP</span> </a>
+                                    </div>
                             </div>
 
-                           </div>
 
+                            <div id="sticky-sidebar" class="col-sm-12 col-md-5 col-lg-4 col-xs-1">
+                                <div class="pricing pricing-2 boxed boxed--border boxed--lg">
+                                  <h4 class="text-center">MY FRUIT BASKET</h4>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 col-lg-7">
 
+                                    <ul>
+                                            <li><span class="checkmark bg--primary-1"></span><span>5 delicious bananas</span></li>
+                                            <li><span class="checkmark bg--primary-1"></span><span>3 apples</span></li>
+                                            <li><span class="checkmark bg--primary-1"></span><span>10 Avocadoes</span></li>
+                                            <li><span class="checkmark bg--primary-1"></span><span>2 packets straw berries</span></li>
+                                            <li><span class="checkmark bg--primary-1"></span><span>3 Thorn melons</span></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 col-lg-5 text-center" style="padding-top:5%;">
+                                        <h5>TOTAL PRICE</h5> <span class="h1"><p>599</p></span>
+                                        <p class="type--fine-print">Kenya Shillings</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                          </form>
+
+                            <div class="col-sm-12 col-md-7 col-lg-8 col-xs-12">
+
+                              <div class="P-options-step3 card-like">
                              <h2>Payment Options</h2>
-                             <input class="validate-required" type="checkbox" name="group[13737][1]"> <span>I have read and agree to the <a href="#">terms and conditions</a></span>
+                             <h4>Choose Your Preffered Payment Option</h4>
                              <hr class="short">
-                             <input type="checkbox"> M-Pesa
-                             <input type="checkbox"> Pay On delivery
-                             <input type="checkbox"> Credit Cards
+
+
+                             <form action="//mrare.us8.list-manage.com/subscribe/post?u=77142ece814d3cff52058a51f&amp;id=f300c9cce8" data-success="Thanks for signing up.  Please check your inbox for a confirmation email." data-error="Please provide your name and email address and agree to the terms.">
+                               <input class="validate-required" type="checkbox"> <span>M-pesa (PayBil)</span>
+                               <br>
+                               <input type="checkbox"> <span>Pay On Delivery</span>
+
+                             </form>
+
+                             <a style="margin-top:30px; padding-right:20px; padding-left:20px; background-color:#7c9330;" class="btn btn--primary right" href="#"> <span class="btn__text">PREVIOUS STEP</span> </a>
+                             <a style="margin-top:30px; padding-right:20px; padding-left:20px;" class="btn btn--primary right" href="#"> <span class="btn__text">COMPLETE PURCHASE</span> </a>
                        </div>
 
+                     </div>
                       </div>
-                      <div id="sticky-sidebar" class="col-sm-12 col-md-5 col-lg-4 col-xs-12">
-                          <div class="pricing pricing-2 boxed boxed--border boxed--lg">
-                              <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                <h4 class="center">Your Items</h4>
-                              <ul>
-                                      <li><span class="checkmark bg--primary-1"></span><span>5 delicious bananas</span></li>
-                                      <li><span class="checkmark bg--primary-1"></span><span>3 apples</span></li>
-                                      <li><span class="checkmark bg--primary-1"></span><span>10 Avocadoes</span></li>
-                                      <li><span class="checkmark bg--primary-1"></span><span>2 packets straw berries</span></li>
-                                      <li><span class="checkmark bg--primary-1"></span><span>3 Thorn melons</span></li>
-                                  </ul>
 
-                              </div>
-                              <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 text-center" style="margin-top:10px;">
-                                  <h5>Available</h5> <span class="h1"><p>599</p></span>
-                                  <p class="type--fine-print">Kenya Shillings</p>
-
-                              </div>
-                              <a style="margin-top:30px;" class="btn btn--primary center" href="#"> <span class="btn__text">PURCHASE BASKET</span> </a>
-                          </div>
-
-                      </div>
                   </div>
-              </div>
-          </section>
+                  </section>
 
-        </div>
+                  <footer style="background-color:#fe9c0e; padding-bottom:10px; padding-top:30px;" class="footer-3 text-center-xs space--xs">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-sm-8"> <img style="max-height:2.07142857em;" alt="Image" class="logo" src="img/logo-frootly3.png">
+
+                              </div>
+                              <div class="col-sm-4 text-right text-right-xs">
+                                  <ul class="social-list list-inline list--hover">
+                                      <li><a href="#"><i style="color:#ffffff;" class="socicon socicon-google icon icon--xs"></i></a></li>
+                                      <li><a href="#"><i style="color:#ffffff;" class="socicon socicon-twitter icon icon--xs"></i></a></li>
+                                      <li><a href="#"><i style="color:#ffffff;" class="socicon socicon-facebook icon icon--xs"></i></a></li>
+                                      <li><a href="#"><i style="color:#ffffff;" class="socicon socicon-instagram icon icon--xs"></i></a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-sm-12 text-left text-center-xs"> <span style="color:black; font-weight:bolder;" class="type--fine-print">© <span style="color:black; font-weight:bolder;" class="update-year"></span> Frootly.</span> <a style="color:black; font-weight:bolder;" class="type--fine-print" href="#">Privacy Policy</a> <a style="color:black; font-weight:bolder;" class="type--fine-print" href="#">Legal</a> </div>
+                          </div>
+                      </div>
+                  </footer>
+
+              </div>
+
+
         <script src="js/jquery-3.1.1.min.js"></script>
         <script src="js/parallax.js"></script>
         <script src="js/smooth-scroll.min.js"></script>

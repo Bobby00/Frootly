@@ -1,0 +1,66 @@
+
+.input-wrapper {
+  opacity: 0.9;
+  width: auto;
+  margin: auto;
+  display: inline-block;
+  padding: 0.5em;
+
+  border-radius: 40px;
+}
+
+.search-icon {
+  position: relative;
+  top: 5px;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: -5px;
+  margin-right: 0.5em;
+}
+
+  #locationField, #controls {
+    position: relative;
+    width: 70%;
+  }
+  #autocomplete {
+    color: #fff;
+    width: 600px;
+    padding: 0.5em;
+    border: solid 0px rgba(255, 255, 255, 0.3);
+    border-bottom: solid 2px #fe9c0e;
+    background: transparent;
+    font-weight: bolder;
+
+  }
+  .labelqq {
+    text-align: right;
+    font-weight: bold;
+    color: #fe9c0e;
+  }
+  #address {
+    width: 100%;
+
+
+  }
+  #address td {
+    font-size: 10pt;
+
+  }
+  .field {
+    width: 99%;
+    color: #fff;
+    width: 600px;
+    padding: 0.5em;
+    border: solid 0px rgba(255, 255, 255, 0.3);
+    border-bottom: solid 2px #fe9c0e;
+    background: transparent;
+  }
+  .slimField {
+
+  }
+  .wideField {
+
+  }
+  #locationField {
+
+  }
