@@ -23,8 +23,18 @@
     width: 70%;
   }
   #autocomplete {
-    color: #fff;
-    width: 600px;
+
+    width:150%;
+    padding: 0.5em;
+    border: solid 0px rgba(255, 255, 255, 0.3);
+    border-bottom: solid 2px #fe9c0e;
+    background: transparent;
+    font-weight: bolder;
+
+  }
+  #autocomplete2 {
+
+
     padding: 0.5em;
     border: solid 0px rgba(255, 255, 255, 0.3);
     border-bottom: solid 2px #fe9c0e;
@@ -48,7 +58,7 @@
   }
   .field {
     width: 99%;
-    color: #fff;
+    color: black;
     width: 600px;
     padding: 0.5em;
     border: solid 0px rgba(255, 255, 255, 0.3);

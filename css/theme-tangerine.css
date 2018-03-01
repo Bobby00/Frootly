@@ -70,7 +70,7 @@ html {
 }
 body {
   font-size: 1em;
-  line-height: 1.85714286em;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
@@ -1642,7 +1642,7 @@ div.recaptcha iframe {
   margin-bottom: 30px;
 }
 .boxed.boxed--lg {
-  padding: 
+  padding:
 }
 .boxed.boxed--sm {
   padding: 1.23809524em;
@@ -4086,7 +4086,7 @@ h5,
 }
 h5:not(:last-child),
 .h5:not(:last-child) {
-  margin-bottom: 1.85714286em;
+  margin-bottom: 0em;
 }
 h6,
 .h6 {
@@ -8769,7 +8769,7 @@ section.unpad > article .imagebg + div {
 .wizard > .steps .current a:hover,
 .wizard > .steps .current a:active {
   background: none;
-  color: #252525;
+  color: #fe9c0e;
 }
 .wizard > .steps a {
   position: relative;
@@ -8819,7 +8819,7 @@ section.unpad > article .imagebg + div {
 .wizard > .steps .disabled a:hover,
 .wizard > .steps .disabled a:active {
   background: none;
-  color: #252525;
+  color: ;
 }
 .wizard > .steps a,
 .wizard > .steps a:hover,
@@ -8848,11 +8848,11 @@ section.unpad > article .imagebg + div {
 .wizard > .content {
   background: #fafafa;
   margin-top: 1.85714286em;
-  margin-bottom: 1.85714286em;
+  margin-bottom: 0px;
   border: 1px solid #ececec;
 }
 .wizard > .content > .body {
-  padding: 1.85714286em;
+  padding: 0em;
   width: 100%;
   height: 100%;
 }
