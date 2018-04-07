@@ -138,7 +138,7 @@
 }
 
 .delete-item {
-  font-family: cursive;
+  font-family: Raleway;
   padding: 3px 1px 3px 1px;
   color: #7c9330;
   font-size: 19px;
@@ -312,5 +312,10 @@
 @media only screen and (min-width: 768px) {
     #modal-sm-show {
         display: none;
+    }
+}
+@media only screen and (max-width: 1440px) {
+    .input-group .form-control:not(:first-child):not(:last-child) {
+        text-align:center;
     }
 }
