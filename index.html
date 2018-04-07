@@ -6,15 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/flickity.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
         <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
         <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="css/theme-tangerine.css" rel="stylesheet" type="text/css" media="all" />
-
         <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="css/test4.css"/>
+        <link href="css/font-raleway.css" rel="stylesheet" type="text/css">
         <link rel="icon" href="img/logo-frootly.png"/>
 
 
@@ -103,6 +104,80 @@
               </div>
             </section>
 
+
+            <section class="text-center bg--secondary">
+
+                              <h2>Our Available Fruits </h2>
+                              <h4 style="color:#7c9330;">- Feel Free to Look Around -</h4>
+                                <div style="display:block;" class="row">
+                                    <div class="slider" data-paging="true" data-timing="4000" data-arrows="true">
+                                        <ul class="slides">
+                                            <li class="col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <a onclick="mybasket()" class="inner-link" href="#show-basket"> <img alt="Image" src="img/apple.jpg"> </a>
+                                                    <a class="block" href="#">
+                                                        <div>
+                                                            <h4>Apples</h4><span> Per Apple</span> </div>
+                                                        <div> <span class="h4 inline-block">KES 40.00</span> </div>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <a onclick="mybasket()" class="inner-link" href="#show-basket"> <img alt="Image" src="img/avocado.jpg"> </a>
+                                                    <a class="block" href="#">
+                                                        <div>
+                                                            <h4>Avocados</h4><span> Per Avocado</span> </div>
+                                                        <div> <span class="h4 inline-block">KES 50.00</span> </div>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <a onclick="mybasket()" class="inner-link" href="#show-basket"> <img alt="Image" src="img/banana.jpg"> </a>
+                                                    <a class="block" href="#">
+                                                        <div>
+                                                            <h4>Bananas</h4><span> Per Banana</span> </div>
+                                                        <div> <span class="h4 inline-block type--strikethrough">KES 30.00</span> <span class="h4 inline-block">KES 20.00</span> </div>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <a onclick="mybasket()" class="inner-link" href="#show-basket"> <img alt="Image" src="img/strawberry.jpg"> </a>
+                                                    <a class="block" href="#">
+                                                        <div>
+                                                            <h4>Strawberries</h4><span> Per Packet</span> </div>
+                                                        <div> <span class="h4 inline-block">KES 50.00</span> </div>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <a onclick="mybasket()" class="inner-link" href="#show-basket"> <img alt="Image" src="img/watermelon.jpg"> </a>
+                                                    <a class="block" href="#">
+                                                        <div>
+                                                            <h4>Watermelon</h4><span> Per Watermelon</span> </div>
+                                                        <div> <span class="h4 inline-block">KES 100.00</span> </div>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="col-sm-4 col-xs-12">
+                                                <div class="product">
+                                                    <a onclick="mybasket()" class="inner-link" href="#show-basket"> <img alt="Image" src="img/mangoes.jpg"> </a>
+                                                    <a class="block" href="#">
+                                                        <div>
+                                                            <h4>Mangoes</h4><span> Per Mango</span> </div>
+                                                        <div> <span class="h4 inline-block">KES 50.00</span> </div>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        </section>
+
             <section style="padding-top:3.42857143em; padding-bottom:3.42857143em;" class="switchable image-background" data-overlay="5">
 
                 <div class="container">
@@ -159,7 +234,7 @@
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/apple.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
-                                          <h2 style="color:orange;" class="text-orange text-left">Apples <span class="price-style"><em>KES 40.00</em></span></h2>
+                                          <h3 style="color:orange;" class="text-orange text-left">Apples <span style="color:black; font-size:12px;">(Per Apple)</span><span class="price-style"><em>KES 40.00</em></span></h3>
                                           <div id="apple_details">
                                             <h5>Very rich in important antioxidants, and dietary fiber</h5>
                                             <a class="add-to-cart cd-add-to-cart" data-name="Apples" data-price="40" onclick="apple_pluminus()" href="#0" >Add To Basket</a>
@@ -182,7 +257,7 @@
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/avocado.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
-                                          <h2 style="color:orange;" class="text-orange text-left">Avocados <span class="price-style"><em>KES 50.00</em></span></h2>
+                                          <h3 style="color:orange;" class="text-orange text-left">Avocados <span style="color:black; font-size:12px;">(Per Fruit)</span><span class="price-style"><em>KES 50.00</em></span></h3>
                                           <div id="avocado_details">
                                             <h5>Rich in Heart-Healthy Monounsaturated Fatty Acids</h5>
                                             <a data-name="Avocados" data-price="50" onclick="avocado_pluminus()" href="#0" class="add-to-cart cd-add-to-cart">Add To Basket</a>
@@ -205,7 +280,7 @@
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/banana.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
-                                          <h2 style="color:orange;" class="text-orange text-left">Bananas <span class="price-style"><em>KES 20.00</em></span></h2>
+                                          <h3 style="color:orange;" class="text-orange text-left">Bananas <span style="color:black; font-size:12px;">(Per Banana)</span><span class="price-style"><em>KES 20.00</em></span></h3>
                                           <div id="bananas_details">
                                             <h5>Has Nutrients That Moderate Blood Sugar Levels</h5>
                                             <a data-name="Bananas" data-price="20" onclick="bananas_pluminus()" href="#0" class="add-to-cart cd-add-to-cart">Add To Basket</a>
@@ -228,7 +303,7 @@
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/strawberry.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
-                                          <h2 style="color:orange;" class="text-orange text-left">Berries <span class="price-style"><em>KES 50.00</em></span></h2>
+                                          <h3 style="color:orange;" class="text-orange text-left">Berries <span style="color:black; font-size:12px;">(Per Packet)</span><span class="price-style"><em>KES 50.00</em></span></h3>
                                           <div id="straw_details">
                                             <h5>Rich in vitamin C that boost immunity</h5>
                                             <a data-name="S.berries" data-price="50" onclick="straw_pluminus()" href="#0" class="add-to-cart cd-add-to-cart">Add To Basket</a>
@@ -251,7 +326,7 @@
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/watermelon.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
-                                          <h2 style="color:orange;" class="text-orange text-left">Melons <span class="price-style"><em>KES 100.00</em></span></h2>
+                                          <h3 style="color:orange;" class="text-orange text-left">Melons <span style="color:black; font-size:12px;">(Per Melon)</span><span class="price-style"><em>KES 100.00</em></span></h3>
                                           <div id="melon_details">
                                             <h5>Rich in vitamin A & C for healthy skin</h5>
                                             <a data-name="W.melon" data-price="100" onclick="melon_pluminus()" href="#0" class="add-to-cart cd-add-to-cart">Add To Basket</a>
@@ -274,7 +349,7 @@
                                     <article class="feature feature-1">
                                         <a href="#0" class="block"> <img alt="Image" src="img/mangoes.jpg"> </a>
                                         <div class="feature__body boxed boxed--border">
-                                          <h2 style="color:orange;" class="text-orange text-left">Mangoes <span class="price-style"><em>KES 50.00</em></span></h2>
+                                          <h3 style="color:orange;" class="text-orange text-left">Mangoes<span style="color:black; font-size:12px;"> (Per Mango)</span><span class="price-style"><em>KES 50.00</em></span></h3>
                                           <div id="mango_details">
                                             <h5>Rich in vitamin C that boosts Immunity </h5>
                                             <a data-name="Mangoes" data-price="50" onclick="mango_pluminus()" href="#0" class="add-to-cart cd-add-to-cart">Add To Basket</a>
@@ -299,7 +374,7 @@
 
 
                       <nav class="navbar navbar-inverse bg-inverse fixed-bottom bg-faded">
-        <div class="row">
+
             <div class="col">
 
                     <i data-toggle="modal" data-target="#cart" class="fa fa-shopping-basket for-checkout" aria-hidden="true"><span class="total-count"></span></i>
@@ -329,7 +404,7 @@
                 <div class="container" style="display:none" id="show-more">
                             <div class="row">
                                 <div class="col-md-5 col-sm-7">
-                                    <h3>Subscribe Here and we will personally notify you once the service is operational.</h3>
+                                    <h3>Enter Your Details To Join The Frootly Community</h3>
 
                                     <hr class="short">
                                     <form action="frootly.php" method="post" enctype="multipart/form-data" autocomplete= "off">
@@ -348,6 +423,7 @@
                             </div>
                         </div>
             </section>
+
 
             <footer  style="padding-bottom:10px; padding-top:30px;" class="footer-3 text-center-xs space--xs footer-style">
                 <div class="container">
@@ -383,9 +459,11 @@
                   </div>
 
                   <div>
+
                     <table class="show-cart table">
 
                     </table>
+
                     <div style="line-height:0em;">
                       <p style="font-size:16px; padding-right:9%;" class="text-right"><strong>Price:</strong> KES <i><strong><span style="color:#fe9c0e; font-weight:bolder; font-size:20px;" class="total-cart"></span></strong><span style="color:#fe9c0e; font-weight:bolder; font-size:20px;">/=</span></i></p>
                       <p style="font-size:16px; padding-right:9%;" class="text-right"><strong>Transit:</strong> KES <i><strong><span id="transit"style="color:#fe9c0e; font-weight:bolder; font-size:20px;">200/=</span></strong></i></p>
@@ -484,8 +562,11 @@ function mybasket(){
                x.style.display = "none";
             }
         }
+
+        window.onload = shoppingCart.clearCart();
         </script>
         <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/flickity.min.js"></script>
         <script src="js/parallax.js"></script>
         <script src="js/smooth-scroll.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

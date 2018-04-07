@@ -290,6 +290,9 @@ $('.clear-cart').click(function() {
 function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
+  var output2 = "";
+  var outputCart = "";
+
   for(var i in cartArray) {
     output += "<tr class='table-striped'>"
 
@@ -302,12 +305,26 @@ function displayCart() {
       + "<td Class='cart-edit'>" + cartArray[i].total + "</td>"
       + "<td><span class='delete-item' data-name=" + cartArray[i].name + "><i class='fa fa-times-circle'></i></span></td>"
       +  "</tr>";
+
   }
+
+  for(var i in cartArray) {
+    output2 += "<tr class='table-striped'>"
+
+    + "<td class='cart-edit'>" + cartArray[i].name + "</td>"
+    + "<td>"
+    + "<input id='autocomplete3' type='text' readonly class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+    + "</td>"
+    +  "</tr>";
+  }
+
   $('.show-cart').html(output);
+  $('.show-cart2').html(output2);
   $('.total-cart').html(shoppingCart.totalCart());
   $('.total-count').html(shoppingCart.totalCount());
   $('.total-total').html(shoppingCart.totalTotal());
 }
+
 
 // Delete item button
 
@@ -346,10 +363,9 @@ $('.show-cart').on("change", ".item-count", function(event) {
    var count = Number($(this).val());
   shoppingCart.setCountForItem(name, count);
   displayCart();
-
 });
 
-console.log(displayCart());
+displayCart();
 
 
 $(document).ready(function(){
@@ -363,7 +379,3 @@ $(document).ready(function(){
       $(".fa-shopping-basket").hide();
     });
   });
-
-
-
-  window.onload = shoppingCart.clearCart();

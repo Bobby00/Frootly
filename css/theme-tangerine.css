@@ -70,7 +70,7 @@ html {
 }
 body {
   font-size: 1em;
-  
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
@@ -1999,7 +1999,7 @@ section.bg--primary .slider[data-paging="true"] .flickity-page-dots .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #252525;
+  background: #7c9330;
   border: none;
   margin: 0 0.46428571em;
 }
@@ -4232,7 +4232,7 @@ table {
 }
 table th,
 table td {
-  padding: 0.92857143em;
+  padding: 0.62857143em;
 }
 table th {
   background: #fafafa;
@@ -4847,10 +4847,11 @@ section.parallax .row .background-image-holder {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.04);
   width: 3.71428571em;
-  height: 3.71428571em;
+  height: 4.1428571em;
   border-radius: 50%;
   text-align: center;
   background: #fff;
+  margin-right: 5%;
   display: inline-block;
   transition: 0.2s ease;
   -webkit-transition: 0.2s ease;
