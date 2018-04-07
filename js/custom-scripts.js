@@ -302,8 +302,8 @@ function displayCart() {
       + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
       + "<span class='plus-item' data-name=" + cartArray[i].name + "><i id='plus-button-style' class='fa fa-plus-circle'></i></span></div></td>"
       + " = "
-      + "<td Class='cart-edit'>" + cartArray[i].total + "</td>"
       + "<td><span class='delete-item' data-name=" + cartArray[i].name + "><i class='fa fa-times-circle'></i></span></td>"
+      + "<td Class='cart-edit'>" + cartArray[i].total + "</td>"
       +  "</tr>";
 
   }
