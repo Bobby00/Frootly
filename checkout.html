@@ -18,9 +18,8 @@
         <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/location-api.css" rel="stylesheet" type="text/css" media="all" />
         <link rel="stylesheet" href="css/test4.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/font-raleway.css" rel="stylesheet" type="text/css">
         <link rel="icon" href="img/logo-frootly.png"/>
 
         <script>
@@ -118,9 +117,9 @@
               <div class="notification pos-right pos-top side-menu bg--white" data-notification-link="sidebar-menu" id="background-nav" data-animation="from-right">
                   <div class="side-menu__module pos-vertical-center text-right">
                       <ul class="menu-vertical">
-                          <li class="h4"> <a href="index.html">Home</a> </li>
-                          <li class="h4"> <a onclick="index.html" class="inner-link" href="#show-basket">Fruit baskets</a> </li>
-                          <li class="h4"> <a href="#">About us</a> </li>
+                          <li class="h4"> <a  style="font-family:Raleway;" href="index.html">Home</a> </li>
+                          <li class="h4"> <a  style="font-family:Raleway;" onclick="index.html" class="inner-link" href="#show-basket">Fruit baskets</a> </li>
+                          <li class="h4"> <a  style="font-family:Raleway;" href="#">About us</a> </li>
                       </ul>
                   </div>
                   <div class="side-menu__module pos-bottom pos-absolute col-xs-12 text-right">
@@ -139,24 +138,55 @@
         <div class="main-container">
 
 
+<style>
 
+.total-count {
+  font-family: Raleway;
+  font-size: 20px;
+  position: absolute;
+  top: 0%;
+  font-weight: bolder;
+  background-color: white;
+  padding: 2px 2px 2px 2px;
+  right: auto;;
+  border-radius: 0px;
+  color: #7c9330;
+  margin-left: 5px;
+
+}
+.total-count:hover {
+  font-family: Raleway;
+  font-size: 20px;
+  position: absolute;
+  top: 0%;
+  font-weight: bolder;
+  background-color: white;
+  padding: 2px 2px 2px 2px;
+  right: auto;;
+  border-radius: 0px;
+  color: #7c9330;
+  margin-left: 5px;
+
+}
+
+</style>
             <section class="switchable bg--secondary image-background" data-overlay="5">
                 <div class="container">
                     <div class="row">
 
                         <div class="col-sm-12 col-md-8 col-lg-8">
-                          <a id="modal-sm-show" style="background-color:#7c9330; color:white; padding:8px;" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-shopping-basket"></i> My Basket</a>
+                          <a id="modal-sm-show" style="background-color:#7c9330; color:white; padding:8px;" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-shopping-basket"></i> My Basket<span class="total-count"></span></a>
 
                           <div class="card-like">
                             <div class="wizard">
-                                <h5>Personal Details</h5>
+                                <h5 style="font-family:Raleway;">Personal Details</h5>
 
                                 <section class="">
 
                                   <form id="myform" action="#">
                                   <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
 
-                                    <div class="p-details-step-1">
+                                    <div style="font-family:Raleway;" class="p-details-step-1">
                                             <h2>Personal Details</h2>
                                     <fieldset>
                                             <h4 style="color:#7c9330;">How Can We Reach You?</h4>
@@ -175,12 +205,12 @@
                                   </div>
                                 </section>
 
-                                <h5>Delivery Details</h5>
+                                <h5 style="font-family:Raleway;">Delivery Details</h5>
 
                                 <section class="">
                                   <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
 
-                                    <div class="D-details-step-2 ">
+                                    <div  style="font-family:Raleway;" class="D-details-step-2 ">
                                               <h2>Delivery Details</h2>
                                     <fieldset>
                                               <h4 style="color:#7c9330;">Where Do We Deliver?</h4>
@@ -201,13 +231,13 @@
 
                                               <br><br>
 
-                                              <table id="address">
+                                              <table  style="font-family:Raleway;" id="address">
 
                                                 <tr>
 
                                                   <td class="labelqq">STREET</td>
                                                   <td class="slimField">
-                                                    <input class="field" id="street_number" disabled="true"></input>
+                                                    <input style="font-family:Raleway;" class="field" id="street_number" disabled="true"></input>
                                                   </td>
 
                                                     <td class="labelqq">ADDRESS</td>
@@ -247,13 +277,13 @@
                                     </div>
                                 </section>
 
-                                <h5>Checkout Details</h5>
+                                <h5 style="font-family:Raleway;">Checkout Details</h5>
 
                                 <section class="">
 
                                   <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
 
-                                    <div class="p-options-step3">
+                                    <div style="font-family:Raleway;" class="p-options-step3">
                             <fieldset>
                                    <h2>Payment Options</h2>
                                    <h4 style="color:#7c9330;">Choose your preferred payment option</h4>
@@ -308,7 +338,7 @@
 
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-5 text-center" style="padding-top:5%;">
-                                    <h5>TOTAL PRICE</h5> <span class="h1"><p class="total-total"></p></span>
+                                    <h5 style="font-family:Raleway;">TOTAL PRICE</h5> <span style="font-family:Raleway;" class="h1"><p class="total-total"></p></span>
                                     <p class="type--fine-print">Kenya Shillings</p>
 
                                 </div>
@@ -381,7 +411,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12 text-left text-center-xs"> <span style="color:black; font-weight:bolder;" class="type--fine-print">© <span style="color:black; font-weight:bolder;" class="update-year"></span> Frootly.</span> <a style="color:black; font-weight:bolder;" class="type--fine-print" href="#">Privacy Policy</a> <a style="color:black; font-weight:bolder;" class="type--fine-print" href="#">Legal</a> </div>
+                        <div class="col-sm-12 text-left text-center-xs"> <span style="color:black; font-family:Raleway; font-weight:bolder;" class="type--fine-print">© <span style="color:black; font-family:Raleway; font-weight:bolder;" class="update-year"></span> Frootly.</span> <a style="color:black; font-family:Raleway; font-weight:bolder;" class="type--fine-print" href="#">Privacy Policy</a> <a style="color:black; font-family:Raleway; font-weight:bolder;" class="type--fine-print" href="#">Legal</a> </div>
                     </div>
                 </div>
             </footer>

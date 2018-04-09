@@ -269,14 +269,14 @@ body {
 }
 @media all and (max-width: 767px) {
   .pos-vertical-center {
-    top: 0;
+    top: 20%;
     transform: none;
     -webkit-transform: none;
   }
 }
 @media all and (max-height: 600px) {
   .pos-vertical-center {
-    top: 0;
+    top: 20%;
     transform: none;
     -webkit-transform: none;
   }
@@ -359,7 +359,7 @@ body {
   .height-20,
   .height-10 {
     height: auto;
-    padding: 4em 0;
+    padding: 16em 0;
   }
 }
 @media all and (min-height: 600px) and (min-width: 767px) {

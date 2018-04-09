@@ -59,16 +59,17 @@
             </div>
         </div>
         <div class="main-container">
-            <section class="cover imagebg text-center section--ken-burns height-80" data-overlay="4">
+            <section id="header" class="cover imagebg text-center section--ken-burns height-80" data-overlay="4">
                 <div class="background-image-holder"> <img alt="background" src="img/frootly-bg.jpg"> </div>
                 <div class="container pos-vertical-center">
                     <div class="row">
                         <div class="col-sm-8 col-md-7">
                             <h1>Enjoy fresh and healthy fruits delivered to you</h1>
-                            <a onclick="myFunction()" class="btn type--uppercase btn--primary inner-link" href="#show-more"> <span class="btn__text"><span>Get started today</span></span>
+                            <a  onclick="mybasket()" href="#show-basket" class="btn type--uppercase btn--primary inner-link"> <span class="btn__text"><span>Get started today</span></span>
                             </a>
                         </div>
                     </div>
+
                 </div>
             </section>
             <section class="space--xs text-center">
@@ -106,11 +107,11 @@
 
 
             <section style="" class="text-center bg--secondary">
-              <div class="container">
+              <div class="container-fluid">
                               <h2>Our Available Fruits </h2>
                               <h4 style="color:#7c9330;">- Feel Free to Look Around -</h4>
                                 <div style="display:block;" class="row">
-                                    <div class="slider" data-paging="true" data-timing="1300" data-arrows="true">
+                                    <div class="slider" data-paging="true" data-timing="1700" data-arrows="true">
                                         <ul class="slides">
                                             <li class="col-sm-4 col-xs-12">
                                                 <div class="product">
@@ -386,6 +387,10 @@
 
             </section>
 
+            <a class="back-to-top inner-link active" href="#header" data-scroll-class="100vh:active">
+            <i class="stack-interface stack-up-open-big"></i>
+        </a>
+
             <section class="text-center bg--dark" >
                 <div class="container">
                     <div class="row">
@@ -401,7 +406,7 @@
                     </div>
                 </div>
 
-                <div class="container" style="display:none" id="show-more">
+                <div class="container" style="display:none; font-family:Raleway;" id="show-more">
                             <div class="row">
                                 <div class="col-md-5 col-sm-7">
                                     <h3>Enter Your Details To Join The Frootly Community</h3>
@@ -441,7 +446,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12 text-left text-center-xs"> <span style="color:black; font-weight:bolder;" class="type--fine-print">© <span style="color:black; font-weight:bolder;" class="update-year"></span> Frootly.</span> <a style="color:black; font-weight:bolder;" class="type--fine-print" href="#">Privacy Policy</a> <a style="color:black; font-weight:bolder;" class="type--fine-print" href="#">Legal</a> </div>
+                        <div class="col-sm-12 text-left text-center-xs"> <span style="color:black; font-family:Raleway; font-weight:bolder;" class="type--fine-print">© <span style="color:black; font-family:Raleway; font-weight:bolder;" class="update-year"></span> Frootly.</span> <a style="color:black; font-family:Raleway; font-weight:bolder;" class="type--fine-print" href="#">Privacy Policy</a> <a style="color:black; font-family:Raleway; font-weight:bolder;" class="type--fine-print" href="#">Legal</a> </div>
                     </div>
                 </div>
             </footer>
@@ -459,10 +464,11 @@
                   </div>
 
                   <div>
-
-                    <table class="show-cart table">
+                    <div id="media-sm-cart" class="container-fluid">
+                    <table style="font-family:Raleway;" class="show-cart table">
 
                     </table>
+                  </div>
 
                     <div style="line-height:0em;">
                       <p style="font-size:16px; padding-right:9%;" class="text-right"><strong>Price:</strong> KES <i><strong><span style="color:#fe9c0e; font-weight:bolder; font-size:20px;" class="total-cart"></span></strong><span style="color:#fe9c0e; font-weight:bolder; font-size:20px;">/=</span></i></p>
@@ -473,9 +479,9 @@
 
                   <div class="modal-footer">
                     <a id="thursday" style="background-color:white;" data-dismiss="modal" class="btn btn--primary">
-                        <span style="color:#fe9c0c;" class="btn__text">Keep Shopping</span>
+                        <span style="color:#fe9c0c; font-family:Raleway;" class="btn__text">Keep Shopping</span>
                       </a>
-                    <button id="order-style" style="border:0px; background-color:#7c9330;" onclick="window.location.href='checkout.html'" class="btn btn-primary">Order now</button>
+                    <button id="order-style" style="border:0px; background-color:#7c9330; font-family:Raleway;" onclick="window.location.href='checkout.html'" class="btn btn-primary">Order now</button>
                   </div>
                 </div>
               </div>

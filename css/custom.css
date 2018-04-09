@@ -6,7 +6,7 @@
 #currentCountMango {
   font-size: 40px;
   color: #fe9c0e;
-  font-family: cursive;
+  font-family: Raleway;
 }
 #decrementButtonApple,
 #decrementButtonAvocado,
@@ -114,7 +114,7 @@
   margin-bottom: 3%;
 }
 .total-count {
-  font-family: cursive;
+  font-family: Raleway;
   font-size: 20px;
   position: absolute;
   top: 0%;
@@ -126,8 +126,9 @@
   right: -13%;
 
 }
+
 .total-count:hover {
-  font-family: cursive;
+  font-family: Raleway;
   font-size: 21px;
   top: 0%;
   color: #7c9330;
@@ -317,5 +318,10 @@
 @media only screen and (max-width: 1440px) {
     .input-group .form-control:not(:first-child):not(:last-child) {
         text-align:center;
+    }
+}
+@media only screen and (max-width: 375px) {
+    #media-sm-cart {
+        margin-left: -5%;
     }
 }
