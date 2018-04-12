@@ -20,7 +20,45 @@
 
 
     </head>
-    <body >
+
+    <?php
+  include 'conct.php';
+
+  // define variables and set to empty values
+  $uname = $email = $phoneno = "";
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $uname = test_input($_POST["uname"]);
+    $email = test_input($_POST["email"]);
+    $phoneno = test_input($_POST["phoneno"]);
+
+  }
+
+  function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
+  // prepare and bind
+  $stmt = $conn->prepare("INSERT INTO users (uname, email, phoneno) VALUES (?, ?, ?)");
+  $stmt->bind_param("sss", $uname, $email, $phoneno);
+
+  // set parameters and execute
+  $isPost = $_SERVER['REQUEST_METHOD'] == 'POST';
+  $uname = $_POST['uname'];
+  $email = $_POST['email'];
+  $phoneno = $_POST['phoneno'];
+  $successful = $stmt->execute();
+  // echo "New records created successfully";
+
+  $stmt->close();
+  $conn->close();
+
+  ?>
+
+    <body>
         <div class="nav-container">
             <div class="via-1506805086708" via="via-1506805086708" vio="frootly">
                 <nav style="position:absolute;" class="bar bar-toggle bar--absolute">
@@ -28,7 +66,7 @@
                         <div class="row">
                             <div class="col-md-1 col-sm-2 col-xs-3">
                                 <div class="bar__module">
-                                    <a href="index.html"> <img class="logo logo-dark" alt="logo" src="img/logo-frootly3.png"> <img class="logo logo-light" alt="logo"> </a>
+                                    <a href="index.php"> <img class="logo logo-dark" alt="logo" src="img/logo-frootly3.png"> <img class="logo logo-light" alt="logo"> </a>
                                 </div>
                             </div>
                             <div class="col-md-11 col-sm-10 col-xs-9">
@@ -119,7 +157,7 @@
                                                     <a class="block" href="#">
                                                         <div>
                                                             <h4>Apples</h4><span> Per Apple</span> </div>
-                                                        <div> <span class="h4 inline-block">KES 40.00</span> </div>
+                                                        <div> <span style="color:#7c9330;" class="h4 inline-block">KES 40.00</span> </div>
                                                     </a>
                                                 </div>
                                             </li>
@@ -129,7 +167,7 @@
                                                     <a class="block" href="#">
                                                         <div>
                                                             <h4>Avocados</h4><span> Per Avocado</span> </div>
-                                                        <div> <span class="h4 inline-block">KES 50.00</span> </div>
+                                                        <div> <span style="color:#7c9330;" class="h4 inline-block">KES 50.00</span> </div>
                                                     </a>
                                                 </div>
                                             </li>
@@ -139,7 +177,7 @@
                                                     <a class="block" href="#">
                                                         <div>
                                                             <h4>Bananas</h4><span> Per Banana</span> </div>
-                                                        <div> <span class="h4 inline-block type--strikethrough">KES 30.00</span> <span class="h4 inline-block">KES 20.00</span> </div>
+                                                        <div> <span class="h4 inline-block type--strikethrough">KES 30.00</span> <span style="color:#7c9330;" class="h4 inline-block">KES 20.00</span> </div>
                                                     </a>
                                                 </div>
                                             </li>
@@ -149,7 +187,7 @@
                                                     <a class="block" href="#">
                                                         <div>
                                                             <h4>Strawberries</h4><span> Per Packet</span> </div>
-                                                        <div> <span class="h4 inline-block">KES 50.00</span> </div>
+                                                        <div> <span style="color:#7c9330;" class="h4 inline-block">KES 50.00</span> </div>
                                                     </a>
                                                 </div>
                                             </li>
@@ -159,7 +197,7 @@
                                                     <a class="block" href="#">
                                                         <div>
                                                             <h4>Watermelon</h4><span> Per Watermelon</span> </div>
-                                                        <div> <span class="h4 inline-block">KES 100.00</span> </div>
+                                                        <div> <span style="color:#7c9330;" class="h4 inline-block">KES 100.00</span> </div>
                                                     </a>
                                                 </div>
                                             </li>
@@ -169,7 +207,7 @@
                                                     <a class="block" href="#">
                                                         <div>
                                                             <h4>Mangoes</h4><span> Per Mango</span> </div>
-                                                        <div> <span class="h4 inline-block">KES 50.00</span> </div>
+                                                        <div> <span style="color:#7c9330;" class="h4 inline-block">KES 50.00</span> </div>
                                                     </a>
                                                 </div>
                                             </li>
@@ -390,40 +428,49 @@
             <a class="back-to-top inner-link active" href="#header" data-scroll-class="100vh:active">
             <i class="stack-interface stack-up-open-big"></i>
         </a>
-
-            <section class="text-center bg--dark" >
+            <section class="text-center bg--dark" id="cta" >
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-md-6">
                             <div class="cta">
                                 <p class="lead"> Join the frootly family and be part of the healthy revolution</p>
-                            <br/>
-                                <a onclick="myFunction()" class="btn btn--primary btn--lg type--uppercase inner-link" href="#show-more"> <span class="btn__text">
-                            Join frootly</span> </a>
+
+                                <!-- <a onclick="myFunction()" class="btn btn--primary btn--lg type--uppercase inner-link" href="#show-more"> <span class="btn__text">
+                            Join frootly</span> </a> -->
                                 <br/><br>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="container" style="display:none; font-family:Raleway;" id="show-more">
+                <div class="container" style="font-family:Raleway;" id="show-more">
                             <div class="row">
                                 <div class="col-md-5 col-sm-7">
                                     <h3>Enter Your Details To Join The Frootly Community</h3>
 
+                                    <?php if ($isPost): ?>
+            <?php if ($successful): ?>
+              <div class="alert alert-info">You have successfully registered</div>
+            <?php else: ?>
+              <div class="alert alert-danger">Please Confrim Your Details!</div>
+            <?php endif; ?>
+            <?php endif; ?>
+
                                     <hr class="short">
-                                    <form action="frootly.php" method="post" enctype="multipart/form-data" autocomplete= "off">
+
+                                    <form method="post" autocomplete="on" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>#cta">
                                         <div class="row">
-                                            <div class="col-xs-12"> <input type="text" name="uname" placeholder="Your Name" required> </div>
-                                            <div class="col-xs-12"> <input type="email" name="email" placeholder="Email Address" required> </div>
-                                            <div class="col-xs-12"> <input type="text" name="phoneno" placeholder="Phone number" required> </div>
+                                            <div class="col-xs-12"> <input type="text" name="uname" value="<?php echo $uname;?>" placeholder="Your Name" required> </div>
+                                            <div class="col-xs-12"> <input type="email" name="email" value="<?php echo $email;?>" placeholder="Email Address" required> </div>
+                                            <div class="col-xs-12"> <input type="text" name="phoneno" value="<?php echo $phoneno;?>" placeholder="Phone number" required> </div>
                                             <div class="col-xs-12">
                                                 <div class="input-checkbox"> <input type="checkbox" name="agree"> </div> <span></span> </div>
-                                            <div class="col-xs-12"><button class="btn btn--primary btn--lg type--uppercase" type="submit" name="submit">Subscribe</button></div>
+                                            <div class="col-xs-12"><button data-tooltip="Thank You For Subscribing" class="btn btn--primary btn--lg type--uppercase" type="submit" name="submit">Subscribe</button></div>
                                           </hr>
 
                                         </div>
                                     </form>
+
                                 </div>
                             </div>
                         </div>
@@ -481,7 +528,7 @@
                     <a id="thursday" style="background-color:white;" data-dismiss="modal" class="btn btn--primary">
                         <span style="color:#fe9c0c; font-family:Raleway;" class="btn__text">Keep Shopping</span>
                       </a>
-                    <button id="order-style" style="border:0px; background-color:#7c9330; font-family:Raleway;" onclick="window.location.href='checkout.html'" class="btn btn-primary">Order now</button>
+                    <button id="order-style" style="border:0px; background-color:#7c9330; font-family:Raleway;" onclick="window.location.href='checkout.php'" class="btn btn-primary">Order now</button>
                   </div>
                 </div>
               </div>
@@ -491,60 +538,51 @@
 
 
 <script>
+
+
+
 function apple_pluminus(){
   var apple_details = $('#apple_details');
   var apple_quantity = $('#apple_quantity');
   apple_details.toggleClass("hide");
   apple_quantity.toggleClass("hide");
 }
-</script>
 
-<script>
 function avocado_pluminus(){
   var avocado_details = $('#avocado_details');
   var avocado_quantity = $('#avocado_quantity');
   avocado_details.toggleClass("hide");
   avocado_quantity.toggleClass("hide");
 }
-</script>
 
-<script>
 function bananas_pluminus(){
   var bananas_details = $('#bananas_details');
   var bananas_quantity = $('#bananas_quantity');
   bananas_details.toggleClass("hide");
   bananas_quantity.toggleClass("hide");
 }
-</script>
 
-<script>
 function straw_pluminus(){
   var straw_details = $('#straw_details');
   var straw_quantity = $('#straw_quantity');
   straw_details.toggleClass("hide");
   straw_quantity.toggleClass("hide");
 }
-</script>
 
-<script>
 function melon_pluminus(){
   var melon_details = $('#melon_details');
   var melon_quantity = $('#melon_quantity');
   melon_details.toggleClass("hide");
   melon_quantity.toggleClass("hide");
 }
-</script>
 
-<script>
 function mango_pluminus(){
   var mango_details = $('#mango_details');
   var mango_quantity = $('#mango_quantity');
   mango_details.toggleClass("hide");
   mango_quantity.toggleClass("hide");
 }
-</script>
 
-<script>
 function mybasket(){
   var y =
   document.getElementById('show-basket');
@@ -555,9 +593,7 @@ function mybasket(){
     y.style.display = 'none';
   }
 }
-</script>
 
-        <script>
             function myFunction(){
                 var x =
             document.getElementById('show-more');
@@ -569,8 +605,9 @@ function mybasket(){
             }
         }
 
-        window.onload = shoppingCart.clearCart();
-        </script>
+
+        // window.onload = shoppingCart.clearCart();
+</script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/flickity.min.js"></script>
         <script src="js/parallax.js"></script>

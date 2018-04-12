@@ -305,6 +305,29 @@
 
 }
 
+
+.p-details-step-1{
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 4px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.D-details-step-2 {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 4px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.p-options-step3{
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 4px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
 @media only screen and (max-width: 767px) {
     #sticky-sidebar {
         display: none;

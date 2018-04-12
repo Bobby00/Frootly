@@ -291,6 +291,7 @@ function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
   var output2 = "";
+  var output3 = "";
   var outputCart = "";
 
   for(var i in cartArray) {
@@ -306,9 +307,6 @@ function displayCart() {
       + "<td Class='cart-edit'>" + cartArray[i].total + "</td>"
       +  "</tr>";
 
-  }
-
-  for(var i in cartArray) {
     output2 += "<tr class='table-striped'>"
 
     + "<td class='cart-edit'>" + cartArray[i].name + "</td>"
@@ -316,6 +314,8 @@ function displayCart() {
     + "<input id='autocomplete3' type='text' readonly class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
     + "</td>"
     +  "</tr>";
+
+    output3 += cartArray[i].name + " " + "-" + cartArray[i].count + ", ";
   }
 
   $('.show-cart').html(output);
@@ -323,6 +323,10 @@ function displayCart() {
   $('.total-cart').html(shoppingCart.totalCart());
   $('.total-count').html(shoppingCart.totalCount());
   $('.total-total').html(shoppingCart.totalTotal());
+
+  console.log(output3);
+  console.log(cartArray);
+  $('#order_values').attr('value', output3);
 }
 
 
