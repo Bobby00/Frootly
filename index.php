@@ -254,9 +254,7 @@
                                     <p class="type--fine-print">Kenya Shillings</p>
                                     <a style="margin-top:30px; padding-right:20px; padding-left:20px;" class="btn btn--primary center" href="#"> <span class="btn__text">PURCHASE BASKET</span> </a>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                 </div>
